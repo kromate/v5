@@ -1,22 +1,15 @@
 <template>
-	<div class="h-[200vh]">
-		<div class="center h-screen w-full bg shadow-md">
-			<!-- <div class="line bg-[#ffffff7b] absolute h-0.5 w-full z-10 top-12"/> -->
-			<!-- <div class="line bg-[#ffffff7b] absolute h-0.5 w-full z-10 bottom-12"/> -->
-			<div class="line bg-[#ffffff7b] fixed h-0 w-0.5 z-10 md:left-16 left-5"/>
-			<div class="line bg-[#ffffff7b] fixed h-0 w-0.5 z-10 md:right-16 right-5"/>
+
 			<div class="relative center text-white pos text-7xl">
-		
 				<img
-					src="../../assets/images/pageZero/border.svg"
+					src="../assets/images/border.svg"
 					alt="border"
 					class="logo-border absolute w-40 rotate-45"
 				/>
 
 				<span class=" p-10 font-semibold">K</span>
 			</div>
-		</div>
-	</div>
+
 
 </template>
 
@@ -27,24 +20,6 @@
 <style >
 body{
     background: #212143;
-}
-.line{
-    animation: grow 1.5s 1.5s 1 forwards;
-}
-.bg {
-	   background: #958e69;
-     transition: 0.8s ease-out;
-}
-.bg:before {
-     content: "";
-     position: absolute;
-     background: #212143;
-     bottom: 0;
-     left: 0;
-     right: 100%;
-     top: 0;
-     transition: top 0.65s ease-out;
-      animation: flow 1.5s 1 forwards;
 }
 
 .logo-border {
