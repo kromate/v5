@@ -13,6 +13,9 @@
 				<twitter class="nav-icon" />
 			</a>
 			<a href="http://" target="_blank" rel="noopener noreferrer">
+				<instagram class="nav-icon" />
+			</a>
+			<a href="http://" target="_blank" rel="noopener noreferrer">
 				<youtube class="nav-icon" />
 			</a>
 			<a href="http://" target="_blank" rel="noopener noreferrer">
@@ -28,6 +31,7 @@ import github from '@/assets/icons/github.vue';
 import twitter from '@/assets/icons/twitter.vue';
 import youtube from '@/assets/icons/youtube.vue';
 import linkedin from '@/assets/icons/linkedin.vue';
+import instagram from '@/assets/icons/instagram.vue';
 import gsap from 'gsap';
 import { onMounted } from 'vue';
 
