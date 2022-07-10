@@ -8,7 +8,6 @@
 </template>
 
 <script setup lang="ts">
-
 import LeftNav from '../components/layouts/LeftNav.vue';
 </script>
 
