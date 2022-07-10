@@ -24,7 +24,7 @@
 import gsap from 'gsap';
 import { onMounted } from 'vue';
 const mql = window.matchMedia('(max-width: 700px)');
-console.log(mql);
+// console.log();
 onMounted(() => {
 	gsap.fromTo(
 		'.animate',
@@ -34,7 +34,7 @@ onMounted(() => {
 			y: 0,
 			stagger: 0.2,
 			duration: 0.4,
-			delay: 3.35,
+			delay: mql.matches ? 2 : 3.35,
 			ease: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
 		}
 	);
