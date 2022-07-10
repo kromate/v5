@@ -8,10 +8,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/core": "^8.9.1",
     "sass": "^1.53.0",
     "vue": "^3.2.25",
     "vue-meta": "^3.0.0-alpha.10",
-		"vue-router": "^4.0.16"
+    "vue-router": "^4.0.16"
   },
   "devDependencies": {
     "@types/node": "^17.0.39",

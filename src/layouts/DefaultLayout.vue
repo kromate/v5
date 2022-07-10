@@ -1,21 +1,20 @@
 <template>
 	<div class="center h-screen w-full">
 		<LeftNav />
-		<div class="layout-line border-l md:right-0 right-5">
-			
-		</div>
+		<RightNav />
 
 		<slot />
 	</div>
 </template>
 
 <script setup lang="ts">
-import LeftNav from '../components/layouts/LeftNav.vue';
+import LeftNav from '@/components/layouts/LeftNav.vue';
+import RightNav from '@/components/layouts/RightNav.vue';
 </script>
 
 <style>
 .layout-line {
-	animation: grow 1.5s 1.5s 1 forwards;
+	animation: grow 0.65s 1.5s 1 forwards;
 }
 @keyframes grow {
 	from {

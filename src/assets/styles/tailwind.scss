@@ -6,55 +6,61 @@
 @tailwind utilities;
 
 * {
-    font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 body {
-    @apply bg-primary;
+	@apply bg-primary;
 }
 section {
-    @apply mx-auto px-20 lg:p-0;
-    max-width: 1000px !important;
+	@apply mx-auto md:px-20 px-8 lg:p-0;
+	max-width: 1000px !important;
 }
 .text-large {
-    font-size: clamp(40px, 8.8vw, 60px);
-    font-weight: 600;
+	font-size: clamp(40px, 8.8vw, 60px);
+	font-weight: 600;
 }
 @layer utilities {
- .nav-icon {
-	@apply h-5  transition-all duration-300 cursor-pointer hover:text-white;
-    &:hover {
-        transform: scale(1.25) !important;
-    }
-}
-.layout-line{
-    	@apply fixed h-0 z-10 text-secondary border-secondary hidden md:flex min-w-[60px] items-center py-5 opacity-0;
-}
-    .chakra {
-        font-family: 'Chakra Petch', sans-serif;
-    }
-    .center {
-        @apply flex justify-center items-center;
-    }
-    .big-btn{
-    @apply text-green border border-green py-3 px-10 rounded cursor-pointer relative;
-    &:focus,
-    &:active {
-      background-color: #ffffff30;
-      outline: none;
-    }
-    &:before {
-     content: "";
-     position: absolute;
-     background: #00ab442b;
-     bottom: 0;
-     left: 0;
-     right: 100%;
-     top: 0;
-     z-index: -1;
-     transition: right 0.35s ease-out;
-    }
-    &:hover:before {
-     right: 0;
-    }
-}
+	.nav-link {
+		@apply transition-all duration-300 cursor-pointer hover:text-white;
+		&:hover {
+			transform: scale(1.1) !important;
+		}
+	}
+	.nav-icon {
+		@apply h-5  transition-all duration-300 cursor-pointer hover:text-white;
+		&:hover {
+			transform: scale(1.25) !important;
+		}
+	}
+	.layout-line {
+		@apply fixed h-0 z-10 text-secondary border-secondary hidden md:flex min-w-[60px] items-center py-5 opacity-0;
+	}
+	.chakra {
+		font-family: 'Chakra Petch', sans-serif;
+	}
+	.center {
+		@apply flex justify-center items-center;
+	}
+	.big-btn {
+		@apply text-green border border-green py-3 px-10 rounded cursor-pointer relative;
+		&:focus,
+		&:active {
+			background-color: #ffffff30;
+			outline: none;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			background: #00ab442b;
+			bottom: 0;
+			left: 0;
+			right: 100%;
+			top: 0;
+			z-index: -1;
+			transition: right 0.35s ease-out;
+		}
+		&:hover:before {
+			right: 0;
+		}
+	}
 }

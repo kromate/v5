@@ -1,6 +1,6 @@
 <template>
 	<section id="Hero" class="flex flex-col items-start h-screen justify-center">
-		<div class="leading-[5rem]">
+		<div class="sm:leading-[5rem] leading-[3rem]">
 			<h1 class="animate text-xl text-green chakra">Hi, my name is</h1>
 			<h2 class="animate text-large text-[#ccd6f6]">Anthony Akpan.</h2>
 			<h3 class="animate text-large text-secondary">
@@ -23,12 +23,20 @@
 <script setup lang="ts">
 import gsap from 'gsap';
 import { onMounted } from 'vue';
-
+const mql = window.matchMedia('(max-width: 700px)');
+console.log(mql);
 onMounted(() => {
 	gsap.fromTo(
 		'.animate',
 		{ opacity: 0, y: 20 },
-		{ opacity: 1, y: 0, stagger: 0.2, duration: 0.4, delay: 2.5 }
+		{
+			opacity: 1,
+			y: 0,
+			stagger: 0.2,
+			duration: 0.4,
+			delay: 3.35,
+			ease: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
+		}
 	);
 });
 </script>
