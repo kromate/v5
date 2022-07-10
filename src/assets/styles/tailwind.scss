@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@100;300;400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    @apply bg-primary;
+}
+section {
+    @apply mx-auto px-20 lg:p-0;
+    max-width: 1000px !important;
+}
+.text-large {
+    font-size: clamp(40px, 8.8vw, 60px);
+    font-weight: 600;
+}
+@layer utilities {
+    a:hover{
+        @apply text-green
+    }
+    .nav-icon {
+	@apply h-6 hover:scale-125 transition-all duration-300;
+}
+.layout-line{
+    	@apply fixed h-0 z-10 text-white hidden md:flex min-w-[60px] items-center py-5 opacity-0;
+}
+    .chakra {
+        font-family: 'Chakra Petch', sans-serif;
+    }
+    .center {
+        @apply flex justify-center items-center;
+    }
+    .big-btn{
+    @apply text-green border border-green py-3 px-10 rounded cursor-pointer relative;
+    &:focus,
+    &:active {
+      background-color: #ffffff30;
+      outline: none;
+    }
+    &:before {
+     content: "";
+     position: absolute;
+     background: #00ab442b;
+     bottom: 0;
+     left: 0;
+     right: 100%;
+     top: 0;
+     z-index: -1;
+     transition: right 0.35s ease-out;
+    }
+    &:hover:before {
+     right: 0;
+    }
+}
+}
