@@ -14,9 +14,9 @@
 			possible.
 		</p>
 
-		<router-link class="animate big-btn mt-5" target="_blank" rel="noreferrer">
+		<a href="" class="animate big-btn mt-5" target="_blank" rel="noreferrer">
 			Resume
-		</router-link>
+		</a>
 	</section>
 </template>
 

@@ -1,7 +1,9 @@
 <template>
 	<div class="center h-screen w-full">
 		<LeftNav />
-		<div class="layout-line border-l md:right-0 right-5"></div>
+		<div class="layout-line border-l md:right-0 right-5">
+			
+		</div>
 
 		<slot />
 	</div>
