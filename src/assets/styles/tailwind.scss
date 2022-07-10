@@ -20,11 +20,9 @@ section {
     font-weight: 600;
 }
 @layer utilities {
-    a:hover{
-        @apply text-green
-    }
+ 
     .nav-icon {
-	@apply h-6 hover:scale-125 transition-all duration-300;
+	@apply h-5 hover:scale-125 transition-all duration-300 cursor-pointer hover:text-light_green;
 }
 .layout-line{
     	@apply fixed h-0 z-10 text-white hidden md:flex min-w-[60px] items-center py-5 opacity-0;

@@ -7,10 +7,11 @@
 				I solve problems and create magic.
 			</h3>
 		</div>
-		<p class="animate text-secondary max-w-xl mt-2">
-			I’m a software engineer specializing in building (and occasionally
-			designing) exceptional digital experiences. Currently, I’m focused on
-			building accessible, human-centered products at Upstatement.
+		<p class="animate text-secondary max-w-2xl mt-2">
+			I'm a software engineer specialized in building Frontend applications,
+			occasionally backend and rarely design. I take pride in my work and ensure
+			I deliver the fastest, most accessible and most responsive application
+			possible.
 		</p>
 
 		<router-link class="animate big-btn mt-5" target="_blank" rel="noreferrer">
