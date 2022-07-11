@@ -6,14 +6,14 @@
 			<router-link
 				to="/"
 				class="relative flex items-center w-auto text-xl font-extrabold tracking-widest text-blue select-none"
-				><img src="@/assets/images/logo.svg" alt="logo" class="h-8 md:h-auto"
+				><img src="@/assets/images/logo.svg" alt="logo" class="h-10"
 			/></router-link>
 
 			<button @click="showMenu = !showMenu" class="effect1">
-				<span></span>
+				<span class="active"></span>
 			</button>
 
-			<transition name="slideUp">
+			<transition name="slideLeft">
 				<div
 					v-if="showMenu"
 					class="w-full gap-4 absolute bg-[#ffffff] shadow-2xl top-14 inset-x-0 p-4"
@@ -85,14 +85,96 @@ const navigate = (link: string) => {
 </script>
 
 <style scoped>
-.slideUp-enter-from,
-.slideUp-leave-to {
-	opacity: 0;
-	transform: translateY(-100px);
+.wrapper {
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
 }
 
-.slideUp-enter-active,
-.slideUp-leave-active {
+button {
+	width: 45px;
+	background: transparent;
+	border: none;
+	height: 35px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+button:focus {
+	outline: none;
+}
+
+.effect1 span {
+	display: inline-block;
+	width: 75%;
+	height: 2px;
+	border-radius: 50px;
+	background: #fff;
+	position: relative;
+	transition: all 0.2s;
+}
+
+.effect1 span:before,
+.effect1 span:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	border-radius: 50px;
+	background: #fff;
+	height: 2px;
+	left: 0px;
+	transition: all 0.3s;
+}
+
+.effect1 span:before {
+	top: 10px;
+}
+
+.effect1 span:after {
+	bottom: 10px;
+}
+
+button.effect1:hover span:after {
+	left: -5px;
+}
+
+button.effect1:hover span:before {
+	left: 5px;
+}
+
+button.effect1 span.active {
+	background: #fff;
+}
+
+button.effect1 span.active:after,
+button.effect1 span.active:before {
+	top: 0px;
+	left: 0px;
+}
+
+button.effect1 span.active:after {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+}
+
+button.effect1 span.active:before {
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+}
+
+.slideLeft-enter-from,
+.slideLeft-leave-to {
+	opacity: 0;
+	transform: translatex(-400px);
+}
+
+.slideLeft-enter-active,
+.slideLeft-leave-active {
 	transition: all 0.35s ease;
 }
 </style>
