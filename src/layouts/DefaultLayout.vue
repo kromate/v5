@@ -1,5 +1,6 @@
 <template>
 	<div class="center h-screen w-full">
+		<TopBar />
 		<LeftNav />
 		<RightNav />
 
@@ -10,6 +11,7 @@
 <script setup lang="ts">
 import LeftNav from '@/components/layouts/LeftNav.vue';
 import RightNav from '@/components/layouts/RightNav.vue';
+import TopBar from '@/components/layouts/TopBar.vue';
 </script>
 
 <style>

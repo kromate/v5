@@ -20,6 +20,12 @@ section {
 	font-weight: 600;
 }
 @layer utilities {
+	.pc {
+		@apply hidden md:flex;
+	}
+	.mobile {
+		@apply md:hidden flex;
+	}
 	.nav-link {
 		@apply transition-all duration-300 cursor-pointer hover:text-white;
 		&:hover {
