@@ -3,11 +3,7 @@
 		<div
 			class="container flex flex-wrap items-center justify-between md:py-5 py-3 px-4 mx-auto md:flex-row max-w-7xl"
 		>
-			<a
-				href="#"
-				class="relative flex items-center w-auto text-xl font-extrabold tracking-widest text-blue select-none"
-				><img src="@/assets/images/logo.svg" alt="logo" class="h-10 z-30"
-			/></a>
+			<a href="#" class="text-white"> <logo class="h-10 w-10" /></a>
 
 			<div
 				@click="showMenu = !showMenu"
@@ -20,20 +16,20 @@
 			<transition name="slideLeft">
 				<div
 					v-if="showMenu"
-					class="w-full gap-4 absolute bg-[#272827] text-secondary inset-0 h-screen p-4"
+					class="w-full gap-4 absolute bg-secondary text-secondary inset-0 h-screen p-4"
 				>
-					<ul class="gap-5 flex flex-col items-center pt-36">
+					<ul class="flex flex-col items-center pt-36">
 						<li class="menu-link">
-							<a href="/"> About </a>
+							<a href="/" class="chakra"> About </a>
 						</li>
 						<li class="menu-link">
-							<a href="/"> Experience </a>
+							<a href="/" class="chakra"> Experience </a>
 						</li>
 						<li class="menu-link">
-							<a href="/"> Works </a>
+							<a href="/" class="chakra"> Works </a>
 						</li>
 						<li class="menu-link">
-							<a href="/"> Contact </a>
+							<a href="/" class="chakra"> Contact </a>
 						</li>
 					</ul>
 				</div>
@@ -58,24 +54,18 @@
 
 <script setup lang="ts">
 import { ref } from '@vue/reactivity';
-import { useRouter } from 'vue-router';
-
-const router = useRouter();
+import logo from '@/assets/icons/logo.vue';
 
 const showMenu = ref(false);
 const toggleMenu = () => {
 	showMenu.value = !showMenu.value;
 };
-const navigate = (link: string) => {
-	toggleMenu();
-	router.push(link);
-};
 </script>
 
 <style scoped lang="scss">
 .menu-link {
-	-webkit-text-stroke: 2px blue;
-	// filter: drop-shadow(3px 3px 2px #8892b0);
+	-webkit-text-stroke: 2px;
+	-webkit-text-stroke-color: red;
 	color: transparent;
 	font-size: 3rem;
 	font-weight: 700;
