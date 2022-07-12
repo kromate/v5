@@ -3,14 +3,26 @@
 		<div
 			class="container flex flex-wrap items-center justify-between md:py-5 py-3 px-4 mx-auto md:flex-row max-w-7xl"
 		>
-			<a href="#" class="text-white"> <logo class="h-10 w-10" /></a>
+			<a
+				href="#"
+				:class="[showMenu ? 'text-primary' : 'text-secondary', 'z-30']"
+			>
+				<logo class="h-10 w-10"
+			/></a>
 
 			<div
 				@click="showMenu = !showMenu"
 				class="menu-btn z-30"
 				:class="{ active: showMenu }"
 			>
-				<span></span>
+				<span
+					:class="[
+						showMenu
+							? 'bg-primary before:bg-primary after:bg-primary'
+							: 'bg-secondary before:bg-secondary after:bg-secondary',
+					]"
+					class=""
+				></span>
 			</div>
 
 			<transition name="slideLeft">
@@ -64,7 +76,7 @@ const toggleMenu = () => {
 
 <style scoped lang="scss">
 .menu-link {
-	-webkit-text-stroke: 2px;
+	-webkit-text-stroke: 2.5px;
 	-webkit-text-stroke-color: red;
 	color: transparent;
 	font-size: 3rem;
@@ -79,7 +91,6 @@ const toggleMenu = () => {
 .menu-btn span,
 .menu-btn span::before,
 .menu-btn span::after {
-	background: white;
 	content: '';
 	position: absolute;
 	width: 30px;
