@@ -1,53 +1,41 @@
 <template>
-	<nav class="absolute top-0 w-full px-4 py-2 z-30 select-none -[72px]">
+	<nav class="absolute top-0 w-full px-4 py-2 z-30 select-none block md:hidden">
 		<div
 			class="container flex flex-wrap items-center justify-between md:py-5 py-3 px-4 mx-auto md:flex-row max-w-7xl"
 		>
-			<router-link
-				to="/"
+			<a
+				href="#"
 				class="relative flex items-center w-auto text-xl font-extrabold tracking-widest text-blue select-none"
-				><img src="@/assets/images/logo.svg" alt="logo" class="h-10"
-			/></router-link>
+				><img src="@/assets/images/logo.svg" alt="logo" class="h-10 z-30"
+			/></a>
 
-			<button @click="showMenu = !showMenu" class="effect1">
-				<span class="active"></span>
-			</button>
+			<div
+				@click="showMenu = !showMenu"
+				class="menu-btn z-30"
+				:class="{ active: showMenu }"
+			>
+				<span></span>
+			</div>
 
 			<transition name="slideLeft">
 				<div
 					v-if="showMenu"
-					class="w-full gap-4 absolute bg-[#ffffff] shadow-2xl top-14 inset-x-0 p-4"
+					class="w-full gap-4 absolute bg-[#272827] text-secondary inset-0 h-screen p-4"
 				>
-					<a
-						href="#"
-						@click="toggleMenu()"
-						class="btn rounded-none py-3 w-full mt-2"
-						>Home</a
-					>
-					<a
-						href="#about"
-						@click="toggleMenu()"
-						class="btn rounded-none py-3 w-full mt-2"
-						>About Us</a
-					>
-					<a
-						href="#choose"
-						@click="toggleMenu()"
-						class="btn rounded-none py-3 w-full mt-2"
-						>Why Choose Us</a
-					>
-					<a
-						href="#values"
-						@click="toggleMenu()"
-						class="btn rounded-none py-3 w-full mt-2"
-						>Our Values</a
-					>
-					<a
-						href="#exp"
-						@click="toggleMenu()"
-						class="btn rounded-none py-3 w-full mt-2"
-						>Expertise</a
-					>
+					<ul class="gap-5 flex flex-col items-center pt-36">
+						<li class="menu-link">
+							<a href="/"> About </a>
+						</li>
+						<li class="menu-link">
+							<a href="/"> Experience </a>
+						</li>
+						<li class="menu-link">
+							<a href="/"> Works </a>
+						</li>
+						<li class="menu-link">
+							<a href="/"> Contact </a>
+						</li>
+					</ul>
 				</div>
 			</transition>
 
@@ -84,92 +72,63 @@ const navigate = (link: string) => {
 };
 </script>
 
-<style scoped>
-.wrapper {
-	max-width: 800px;
-	width: 100%;
-	margin: 0 auto;
-	text-align: center;
+<style scoped lang="scss">
+.menu-link {
+	-webkit-text-stroke: 2px blue;
+	// filter: drop-shadow(3px 3px 2px #8892b0);
+	color: transparent;
+	font-size: 3rem;
+	font-weight: 700;
+}
+.menu-btn {
+	height: 32px;
+	width: 30px;
+	cursor: pointer;
 }
 
-button {
-	width: 45px;
-	background: transparent;
-	border: none;
-	height: 35px;
-	padding: 0px;
-	overflow: hidden;
-}
-
-button:focus {
-	outline: none;
-}
-
-.effect1 span {
-	display: inline-block;
-	width: 75%;
-	height: 2px;
-	border-radius: 50px;
-	background: #fff;
-	position: relative;
-	transition: all 0.2s;
-}
-
-.effect1 span:before,
-.effect1 span:after {
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+	background: white;
 	content: '';
 	position: absolute;
-	width: 100%;
+	width: 30px;
+	height: 3px;
+	margin-top: 13px;
 	border-radius: 50px;
-	background: #fff;
-	height: 2px;
-	left: 0px;
-	transition: all 0.3s;
+	transform: rotateY(180deg);
+	transition: 0.5s ease-in-out;
+}
+.menu-btn span::before {
+	margin-top: -10px;
+	width: 40px;
+}
+.menu-btn span::after {
+	margin-top: 10px;
+	width: 40px;
+}
+.menu-btn.active span {
+	background: transparent;
 }
 
-.effect1 span:before {
-	top: 10px;
-}
-
-.effect1 span:after {
-	bottom: 10px;
-}
-
-button.effect1:hover span:after {
-	left: -5px;
-}
-
-button.effect1:hover span:before {
-	left: 5px;
-}
-
-button.effect1 span.active {
-	background: #fff;
-}
-
-button.effect1 span.active:after,
-button.effect1 span.active:before {
-	top: 0px;
-	left: 0px;
-}
-
-button.effect1 span.active:after {
-	transform: rotate(-45deg);
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
-}
-
-button.effect1 span.active:before {
+.menu-btn.active span::before {
+	margin-top: 0;
 	transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
 }
+
+.menu-btn.active span::after {
+	margin-top: 0;
+	transform: rotate(-45deg);
+}
+
+// .menu-btn.active {
+// 	transform: rotateY(180deg);
+// 	transition: 0.5s ease-in-out;
+// }
 
 .slideLeft-enter-from,
 .slideLeft-leave-to {
-	opacity: 0;
+	// opacity: 0;
 	transform: translatex(-400px);
 }
 
