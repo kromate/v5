@@ -6,7 +6,7 @@
 		<logo class="nav-icon !h-10 w-8" />
 
 		<div class="mt-auto gap-8 flex-col flex">
-			<a href="http://" target="_blank" rel="noopener noreferrer">
+			<a href="https://github.com/kromate" target="_blank" rel="noopener noreferrer">
 				<github class="nav-icon" />
 			</a>
 			<a href="http://" target="_blank" rel="noopener noreferrer">
