@@ -6,19 +6,15 @@
 			<a
 				href="#"
 				class="transition-all duration-300"
-				:class="[isActive ? 'text-primary' : 'text-secondary', 'z-30']"
+				:class="[showMenu ? 'text-primary' : 'text-secondary', 'z-30']"
 			>
 				<logo class="h-10 w-10"
 			/></a>
 
-			<div
-				@click="toggleMenu"
-				class="menu-btn z-30"
-				:class="{ active: isActive }"
-			>
+			<div @click="toggleMenu" class="menu-btn z-30 topIcon">
 				<span
 					:class="[
-						isActive
+						showMenu
 							? 'bg-primary before:bg-primary after:bg-primary'
 							: 'bg-secondary before:bg-secondary after:bg-secondary',
 					]"
@@ -26,7 +22,12 @@
 				></span>
 			</div>
 
-			<transition appear @enter="enter" :css="false">
+			<transition
+				appear
+				@enter="enter"
+				@before-enter="beforeEnter"
+				:css="false"
+			>
 				<div
 					v-if="showMenu"
 					class="w-full gap-4 absolute bg-secondary inset-0 h-screen p-4"
@@ -112,9 +113,8 @@ import instagram from '@/assets/icons/instagram.vue';
 import gsap from 'gsap';
 import { onMounted } from 'vue';
 
-const timeline = gsap.timeline();
+const timeline = gsap.timeline({ duration: 0.25 });
 const showMenu = ref(false);
-const isActive = ref(false);
 const toggleMenu = () => {
 	if (!showMenu.value) {
 		showMenu.value = true;
@@ -123,40 +123,35 @@ const toggleMenu = () => {
 	}
 };
 
+const beforeEnter = (el: any) => {
+	el.style.opacity = 0;
+	el.style.transform = 'translateX(-100px)';
+};
 const enter = (el: any, done: any) => {
+	console.log(1);
 	timeline.play(0);
-	timeline
-		.fromTo(
-			el,
-			{
-				opacity: 0,
-				x: -100,
-			},
-			{
-				opacity: 1,
-				x: 0,
-				duration: 0.25,
-				onComplete: () => {
-					isActive.value = true;
-				},
-			}
-		)
-		.fromTo(
-			'li',
-			{ opacity: 0, y: 10 },
-			{ opacity: 1, y: 0, stagger: 0.25, duration: 0.25 }
-		);
+	timeline.to(el, {
+		opacity: 1,
+		x: 0,
+		duration: 0.25,
+		onComplete: done,
+	});
+	// .to('.topIcon', {
+	// 	color: 'black',
+	// })
+	// .fromTo(
+	// 	'li',
+	// 	{ opacity: 0, y: 10 },
+	// 	{ opacity: 1, y: 0, stagger: 0.25, duration: 0.25 }
+	// );
 };
 
-const close = () => {
-	timeline.reverse().then(() => {
-		showMenu.value = false;
-		isActive.value = false;
-	});
+const close = async () => {
+	await timeline.reverse();
+	showMenu.value = false;
 	// setTimeout(() => {
 	// 	showMenu.value = false;
-	// 	isActive.value = false;
-	// }, 200);
+	// }, 3500);
 };
 onMounted(() => {
 	gsap.fromTo(
