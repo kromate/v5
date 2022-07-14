@@ -6,19 +6,39 @@
 		<logo class="nav-icon !h-10 w-8" />
 
 		<div class="mt-auto gap-8 flex-col flex">
-			<a href="https://github.com/kromate" target="_blank" rel="noopener noreferrer">
+			<a
+				href="https://github.com/kromate"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
 				<github class="nav-icon" />
 			</a>
-			<a href="http://" target="_blank" rel="noopener noreferrer">
+			<a
+				href="https://twitter.com/kromate_24"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
 				<twitter class="nav-icon" />
 			</a>
-			<a href="http://" target="_blank" rel="noopener noreferrer">
+			<a
+				href="https://www.instagram.com/kromate_24/"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
 				<instagram class="nav-icon" />
 			</a>
-			<a href="http://" target="_blank" rel="noopener noreferrer">
+			<a
+				href="https://www.youtube.com/c/Kromate_24"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
 				<youtube class="nav-icon" />
 			</a>
-			<a href="http://" target="_blank" rel="noopener noreferrer">
+			<a
+				href="https://www.linkedin.com/in/kromate/"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
 				<linkedin class="nav-icon" />
 			</a>
 		</div>
