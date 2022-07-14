@@ -5,6 +5,7 @@
 		>
 			<a
 				href="#"
+				class="transition-all duration-300"
 				:class="[showMenu ? 'text-primary' : 'text-secondary', 'z-30']"
 			>
 				<logo class="h-10 w-10"
@@ -67,11 +68,29 @@
 <script setup lang="ts">
 import { ref } from '@vue/reactivity';
 import logo from '@/assets/icons/logo.vue';
+import gsap from 'gsap';
+import { onMounted } from 'vue';
 
 const showMenu = ref(false);
 const toggleMenu = () => {
 	showMenu.value = !showMenu.value;
 };
+
+
+onMounted(() => {
+	gsap.fromTo(
+		'nav',
+		{ opacity: 0, y: -20 },
+		{
+			opacity: 1,
+			y: 0,
+			stagger: 0.2,
+			duration: 0.35,
+			delay: 1.75,
+			ease: 'linear',
+		}
+	);
+});
 </script>
 
 <style scoped lang="scss">
@@ -93,20 +112,20 @@ const toggleMenu = () => {
 .menu-btn span::after {
 	content: '';
 	position: absolute;
-	width: 30px;
+	width: 25px;
 	height: 3px;
 	margin-top: 13px;
 	border-radius: 50px;
 	transform: rotateY(180deg);
-	transition: 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 .menu-btn span::before {
 	margin-top: -10px;
-	width: 40px;
+	width: 35px;
 }
 .menu-btn span::after {
 	margin-top: 10px;
-	width: 40px;
+	width: 35px;
 }
 .menu-btn.active span {
 	background: transparent;
