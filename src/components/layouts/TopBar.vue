@@ -26,25 +26,27 @@
 				></span>
 			</div>
 
-			<div
-				id="navBody"
-				class="w-full gap-4 absolute bg-secondary text-secondary inset-0 h-screen p-4 opacity-0"
-			>
-				<ul class="flex flex-col items-center pt-36">
-					<li class="menu-link">
-						<a href="/" class="chakra"> About </a>
-					</li>
-					<li class="menu-link">
-						<a href="/" class="chakra"> Experience </a>
-					</li>
-					<li class="menu-link">
-						<a href="/" class="chakra"> Works </a>
-					</li>
-					<li class="menu-link">
-						<a href="/" class="chakra"> Contact </a>
-					</li>
-				</ul>
-			</div>
+			<transition appear @enter="enter" :css="false">
+				<div
+					v-if="showMenu"
+					class="w-full gap-4 absolute bg-secondary text-secondary inset-0 h-screen p-4"
+				>
+					<ul class="flex flex-col items-center pt-36">
+						<li class="menu-link">
+							<a href="/" class="chakra"> About </a>
+						</li>
+						<li class="menu-link">
+							<a href="/" class="chakra"> Experience </a>
+						</li>
+						<li class="menu-link">
+							<a href="/" class="chakra"> Works </a>
+						</li>
+						<li class="menu-link">
+							<a href="/" class="chakra"> Contact </a>
+						</li>
+					</ul>
+				</div>
+			</transition>
 
 			<div class="pc">
 				<a href="#" class="btn-secondary pc hover:text-primary">Home</a>
@@ -71,21 +73,22 @@ import { onMounted } from 'vue';
 
 const timeline = gsap.timeline();
 const showMenu = ref(false);
-
 const toggleMenu = () => {
 	if (!showMenu.value) {
-		console.log('play');
-		timeline.play().then(() => {
-			showMenu.value = !showMenu.value;
-		});
+		showMenu.value = true;
+		// timeline.play(0);
+		// setTimeout(() => {
+		// 	showMenu.value = true;
+		// }, 500);
 	} else {
-		console.log('reverse');
-		timeline.reverse().then(() => {
-			showMenu.value = !showMenu.value;
-		});
+		close();
 	}
+};
+
+const enter = (el: any, done: any) => {
+	timeline.play(0);
 	timeline.fromTo(
-		'#navBody',
+		el,
 		{
 			opacity: 0,
 			x: -100,
@@ -94,13 +97,17 @@ const toggleMenu = () => {
 			opacity: 1,
 			x: 0,
 			duration: 0.35,
-			// onComplete: () => {
-			// 	showMenu.value = !showMenu.value;
-			// },
+			onComplete: done,
 		}
 	);
 };
 
+const close = () => {
+	timeline.reverse();
+	setTimeout(() => {
+		showMenu.value = false;
+	}, 200);
+};
 onMounted(() => {
 	gsap.fromTo(
 		'nav',
@@ -108,9 +115,8 @@ onMounted(() => {
 		{
 			opacity: 1,
 			y: 0,
-			stagger: 0.2,
 			duration: 0.35,
-			delay: 1.75,
+			delay: 1.65,
 			ease: 'linear',
 		}
 	);
