@@ -31,7 +31,7 @@
 					v-if="showMenu"
 					class="w-full gap-4 absolute bg-secondary inset-0 h-screen p-4"
 				>
-					<ul class="flex flex-col items-center pt-36">
+					<ul class="flex flex-col items-center pt-36 h-full">
 						<li class="menu-link">
 							<a href="/" class="chakra"> About </a>
 						</li>
@@ -44,23 +44,59 @@
 						<li class="menu-link">
 							<a href="/" class="chakra"> Contact </a>
 						</li>
+						<span class="menu-link">
+							<div class="mt-20 gap-12 items-center flex">
+								<li>
+									<a
+										href="https://github.com/kromate"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<github class="nav-icon" />
+									</a>
+								</li>
+
+								<li>
+									<a
+										href="https://twitter.com/kromate_24"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<twitter class="nav-icon" />
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://www.instagram.com/kromate_24/"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<instagram class="nav-icon" />
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://www.youtube.com/c/Kromate_24"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<youtube class="nav-icon" />
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://www.linkedin.com/in/kromate/"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<linkedin class="nav-icon" />
+									</a>
+								</li>
+							</div>
+						</span>
 					</ul>
 				</div>
-			</transition> 
-
-			<div class="pc">
-				<a href="#" class="btn-secondary pc hover:text-primary">Home</a>
-				<a href="#about" class="btn-secondary pc hover:text-primary"
-					>About Us</a
-				>
-				<a href="#choose" class="btn-secondary pc hover:text-primary"
-					>Why Choose Us</a
-				>
-				<a href="#values" class="btn-secondary pc hover:text-primary"
-					>Our Values</a
-				>
-				<a href="#exp" class="btn-secondary pc hover:text-primary">Expertise</a>
-			</div>
+			</transition>
 		</div>
 	</nav>
 </template>
@@ -68,6 +104,11 @@
 <script setup lang="ts">
 import { ref } from '@vue/reactivity';
 import logo from '@/assets/icons/logo.vue';
+import github from '@/assets/icons/github.vue';
+import twitter from '@/assets/icons/twitter.vue';
+import youtube from '@/assets/icons/youtube.vue';
+import linkedin from '@/assets/icons/linkedin.vue';
+import instagram from '@/assets/icons/instagram.vue';
 import gsap from 'gsap';
 import { onMounted } from 'vue';
 
@@ -103,11 +144,7 @@ const enter = (el: any, done: any) => {
 		.fromTo(
 			'li',
 			{ opacity: 0, y: 10 },
-			{
-				opacity: 1,
-				y: 0,
-				stagger: 0.25,
-			}
+			{ opacity: 1, y: 0, stagger: 0.25, duration: 0.25 }
 		);
 };
 
@@ -137,6 +174,9 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
+.nav-icon {
+	transform: scale(1.5);
+}
 .menu-link {
 	background: -webkit-linear-gradient(
 		-86deg,
