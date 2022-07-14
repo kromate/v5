@@ -12,7 +12,7 @@
 			/></a>
 
 			<div
-				@click="showMenu = !showMenu"
+				@click="toggleMenu"
 				class="menu-btn z-30"
 				:class="{ active: showMenu }"
 			>
@@ -26,27 +26,25 @@
 				></span>
 			</div>
 
-			<transition name="slideLeft">
-				<div
-					v-if="showMenu"
-					class="w-full gap-4 absolute bg-secondary text-secondary inset-0 h-screen p-4"
-				>
-					<ul class="flex flex-col items-center pt-36">
-						<li class="menu-link">
-							<a href="/" class="chakra"> About </a>
-						</li>
-						<li class="menu-link">
-							<a href="/" class="chakra"> Experience </a>
-						</li>
-						<li class="menu-link">
-							<a href="/" class="chakra"> Works </a>
-						</li>
-						<li class="menu-link">
-							<a href="/" class="chakra"> Contact </a>
-						</li>
-					</ul>
-				</div>
-			</transition>
+			<div
+				id="navBody"
+				class="w-full gap-4 absolute bg-secondary text-secondary inset-0 h-screen p-4 opacity-0"
+			>
+				<ul class="flex flex-col items-center pt-36">
+					<li class="menu-link">
+						<a href="/" class="chakra"> About </a>
+					</li>
+					<li class="menu-link">
+						<a href="/" class="chakra"> Experience </a>
+					</li>
+					<li class="menu-link">
+						<a href="/" class="chakra"> Works </a>
+					</li>
+					<li class="menu-link">
+						<a href="/" class="chakra"> Contact </a>
+					</li>
+				</ul>
+			</div>
 
 			<div class="pc">
 				<a href="#" class="btn-secondary pc hover:text-primary">Home</a>
@@ -71,11 +69,37 @@ import logo from '@/assets/icons/logo.vue';
 import gsap from 'gsap';
 import { onMounted } from 'vue';
 
+const timeline = gsap.timeline();
 const showMenu = ref(false);
-const toggleMenu = () => {
-	showMenu.value = !showMenu.value;
-};
 
+const toggleMenu = () => {
+	if (!showMenu.value) {
+		console.log('play');
+		timeline.play().then(() => {
+			showMenu.value = !showMenu.value;
+		});
+	} else {
+		console.log('reverse');
+		timeline.reverse().then(() => {
+			showMenu.value = !showMenu.value;
+		});
+	}
+	timeline.fromTo(
+		'#navBody',
+		{
+			opacity: 0,
+			x: -100,
+		},
+		{
+			opacity: 1,
+			x: 0,
+			duration: 0.35,
+			// onComplete: () => {
+			// 	showMenu.value = !showMenu.value;
+			// },
+		}
+	);
+};
 
 onMounted(() => {
 	gsap.fromTo(
@@ -146,14 +170,14 @@ onMounted(() => {
 // 	transition: 0.5s ease-in-out;
 // }
 
-.slideLeft-enter-from,
-.slideLeft-leave-to {
-	// opacity: 0;
-	transform: translatex(-400px);
-}
+// .slideLeft-enter-from,
+// .slideLeft-leave-to {
+// 	// opacity: 0;
+// 	transform: translatex(-400px);
+// }
 
-.slideLeft-enter-active,
-.slideLeft-leave-active {
-	transition: all 0.35s ease;
-}
+// .slideLeft-enter-active,
+// .slideLeft-leave-active {
+// 	transition: all 0.35s ease;
+// }
 </style>
