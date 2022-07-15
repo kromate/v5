@@ -146,18 +146,9 @@ const enter = (el: any, done: any) => {
 };
 
 const close = () => {
-	timeline
-		.to('li', {
-			opacity: 0,
-			y: 10,
-			duration: 0.25,
-			stagger: 0.25,
-			reversed: true,
-		})
-		.to('.navMenu', { opacity: 0, x: -100, duration: 0.25 })
-		.then(() => {
-			showMenu.value = false;
-		});
+	timeline.to('.navMenu', { opacity: 0, x: -100, duration: 0.25 }).then(() => {
+		showMenu.value = false;
+	});
 };
 onMounted(() => {
 	gsap.fromTo(
