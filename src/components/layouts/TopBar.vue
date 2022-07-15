@@ -141,7 +141,7 @@ const enter = (el: any, done: any) => {
 		.fromTo(
 			'li',
 			{ opacity: 0, y: 10 },
-			{ opacity: 1, y: 0, stagger: 0.25, ease: 'powerIn', duration: 0.25 }
+			{ opacity: 1, y: 0, stagger: 0.25, ease: 'linear', duration: 0.15 }
 		);
 };
 
