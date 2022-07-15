@@ -243,20 +243,4 @@ onMounted(() => {
 	margin-top: 0;
 	transform: rotate(-45deg);
 }
-
-// .menu-btn.active {
-// 	transform: rotateY(180deg);
-// 	transition: 0.5s ease-in-out;
-// }
-
-// .slideLeft-enter-from,
-// .slideLeft-leave-to {
-// 	// opacity: 0;
-// 	transform: translatex(-400px);
-// }
-
-// .slideLeft-enter-active,
-// .slideLeft-leave-active {
-// 	transition: all 0.35s ease;
-// }
 </style>
