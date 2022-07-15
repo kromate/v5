@@ -1,5 +1,5 @@
 <template>
-	<div class="flex-col center w-full">
+	<div class="flex-col center w-full" ref="body">
 		<TopBar />
 		<LeftNav />
 		<RightNav />
@@ -15,6 +15,9 @@ import TopBar from '@/components/layouts/TopBar.vue';
 </script>
 
 <style>
+html {
+	overflow: hidden;
+}
 .layout-line {
 	animation: grow 0.65s 1.5s 1 forwards;
 }

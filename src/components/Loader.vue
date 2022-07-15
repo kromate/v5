@@ -15,10 +15,14 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import { scrollControl } from '@/composibles/controls';
+
+const { enableScroll } = scrollControl();
 const show = ref(true);
 onMounted(() => {
 	setTimeout(() => {
 		show.value = false;
+		enableScroll();
 	}, 2500);
 });
 </script>

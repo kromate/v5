@@ -1,5 +1,5 @@
 <template>
-	<nav class="absolute top-0 w-full px-4 py-2 z-30 select-none block md:hidden">
+	<nav class="top-0 w-full px-4 py-2 z-30 select-none block md:hidden sticky">
 		<div
 			class="container flex flex-wrap items-center justify-between md:py-5 py-3 px-4 mx-auto md:flex-row max-w-7xl"
 		>
@@ -111,12 +111,16 @@ import linkedin from '@/assets/icons/linkedin.vue';
 import instagram from '@/assets/icons/instagram.vue';
 import gsap from 'gsap';
 import { onMounted } from 'vue';
+import { scrollControl } from '@/composibles/controls';
+
+const { enableScroll, disableScroll } = scrollControl();
 
 const timeline = gsap.timeline({ duration: 0.001 });
 const showMenu = ref(false);
 const toggleMenu = () => {
 	if (!showMenu.value) {
 		showMenu.value = !showMenu.value;
+		disableScroll();
 	} else {
 		close();
 	}
@@ -143,6 +147,7 @@ const enter = (el: any, done: any) => {
 const close = () => {
 	gsap.to('.navMenu', { opacity: 0, x: -100, duration: 0.25 }).then(() => {
 		showMenu.value = false;
+		enableScroll();
 	});
 };
 onMounted(() => {
