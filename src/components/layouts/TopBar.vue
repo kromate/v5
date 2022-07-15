@@ -1,5 +1,7 @@
 <template>
-	<nav class="top-0 w-full px-4 py-2 z-30 select-none block md:hidden sticky">
+	<nav
+		class="top-0 w-full px-4 py-2 z-30 select-none block md:hidden absolute shadow-sm shadow-[#424643]"
+	>
 		<div
 			class="container flex flex-wrap items-center justify-between md:py-5 py-3 px-4 mx-auto md:flex-row max-w-7xl"
 		>
