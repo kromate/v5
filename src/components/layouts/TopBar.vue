@@ -25,85 +25,80 @@
 					class=""
 				></span>
 			</div>
-
-			<transition
-				appear
-				@enter="enter"
-				@before-enter="beforeEnter"
-				:css="false"
-			>
-				<div
-					v-if="showMenu"
-					class="navMenu w-full gap-4 absolute bg-secondary inset-0 h-screen p-4"
-				>
-					<ul class="flex flex-col items-center pt-36 h-full">
-						<li class="menu-link">
-							<a href="/" class="chakra"> About </a>
-						</li>
-						<li class="menu-link">
-							<a href="/" class="chakra"> Experience </a>
-						</li>
-						<li class="menu-link">
-							<a href="/" class="chakra"> Works </a>
-						</li>
-						<li class="menu-link">
-							<a href="/" class="chakra"> Contact </a>
-						</li>
-						<span class="menu-link">
-							<li class="mt-20 gap-12 items-center flex">
-								<span>
-									<a
-										href="https://github.com/kromate"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										<github class="nav-icon" />
-									</a>
-								</span>
-
-								<span>
-									<a
-										href="https://twitter.com/kromate_24"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										<twitter class="nav-icon" />
-									</a>
-								</span>
-								<span>
-									<a
-										href="https://www.instagram.com/kromate_24/"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										<instagram class="nav-icon" />
-									</a>
-								</span>
-								<span>
-									<a
-										href="https://www.youtube.com/c/Kromate_24"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										<youtube class="nav-icon" />
-									</a>
-								</span>
-								<span>
-									<a
-										href="https://www.linkedin.com/in/kromate/"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										<linkedin class="nav-icon" />
-									</a>
-								</span>
-							</li>
-						</span>
-					</ul>
-				</div>
-			</transition>
 		</div>
 	</nav>
+
+	<transition appear @enter="enter" @before-enter="beforeEnter" :css="false">
+		<div
+			v-if="showMenu"
+			class="navMenu w-full gap-4 fixed bg-secondary inset-0 h-full p-4 z-20"
+		>
+			<ul class="flex flex-col items-center pt-36 h-full">
+				<li class="menu-link">
+					<a href="#about" class="chakra" @click="close"> About </a>
+				</li>
+				<li class="menu-link">
+					<a href="#experience" class="chakra" @click="close"> Experience </a>
+				</li>
+				<li class="menu-link">
+					<a href="#works" class="chakra" @click="close"> Works </a>
+				</li>
+				<li class="menu-link">
+					<a href="#contact" class="chakra" @click="close"> Contact </a>
+				</li>
+				<span class="menu-link">
+					<li class="mt-20 gap-12 items-center flex">
+						<span>
+							<a
+								href="https://github.com/kromate"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<github class="nav-icon" />
+							</a>
+						</span>
+
+						<span>
+							<a
+								href="https://twitter.com/kromate_24"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<twitter class="nav-icon" />
+							</a>
+						</span>
+						<span>
+							<a
+								href="https://www.instagram.com/kromate_24/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<instagram class="nav-icon" />
+							</a>
+						</span>
+						<span>
+							<a
+								href="https://www.youtube.com/c/Kromate_24"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<youtube class="nav-icon" />
+							</a>
+						</span>
+						<span>
+							<a
+								href="https://www.linkedin.com/in/kromate/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<linkedin class="nav-icon" />
+							</a>
+						</span>
+					</li>
+				</span>
+			</ul>
+		</div>
+	</transition>
 </template>
 
 <script setup lang="ts">

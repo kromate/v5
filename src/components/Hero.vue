@@ -1,5 +1,5 @@
 <template>
-	<section id="Hero" class="flex flex-col items-start h-screen justify-center">
+	<section id="hero" class="flex flex-col items-start h-screen justify-center">
 		<div class="sm:leading-[5rem] leading-[3rem]">
 			<h1 class="animate text-xl text-green chakra">Hi, my name is</h1>
 			<h2 class="animate text-large text-[#ccd6f6]">Anthony Akpan.</h2>

@@ -1,5 +1,5 @@
 <template>
-	<div class="center h-screen w-full">
+	<div class="flex-col center w-full">
 		<TopBar />
 		<LeftNav />
 		<RightNav />
