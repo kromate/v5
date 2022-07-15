@@ -11,7 +11,11 @@
 				<logo class="h-10 w-10"
 			/></a>
 
-			<div @click="toggleMenu" class="menu-btn z-30 topIcon">
+			<div
+				@click="toggleMenu"
+				class="menu-btn z-30"
+				:class="{ active: showMenu }"
+			>
 				<span
 					:class="[
 						showMenu
@@ -30,7 +34,7 @@
 			>
 				<div
 					v-if="showMenu"
-					class="w-full gap-4 absolute bg-secondary inset-0 h-screen p-4"
+					class="navMenu w-full gap-4 absolute bg-secondary inset-0 h-screen p-4"
 				>
 					<ul class="flex flex-col items-center pt-36 h-full">
 						<li class="menu-link">
@@ -113,10 +117,14 @@ import instagram from '@/assets/icons/instagram.vue';
 import gsap from 'gsap';
 import { onMounted } from 'vue';
 
-const timeline = gsap.timeline();
+const timeline = gsap.timeline({ duration: 0.001 });
 const showMenu = ref(false);
 const toggleMenu = () => {
-	showMenu.value = !showMenu.value;
+	if (!showMenu.value) {
+		showMenu.value = !showMenu.value;
+	} else {
+		close();
+	}
 };
 const beforeEnter = (el: any) => {
 	el.style.opacity = 0;
@@ -127,16 +135,29 @@ const enter = (el: any, done: any) => {
 		.to(el, {
 			opacity: 1,
 			x: 0,
+			duration: 0.25,
 			onComplete: done(),
 		})
-		.to('.topIcon', {
-			color: 'black',
-		})
-		.fromTo('li', { opacity: 0, y: 10 }, { opacity: 1, y: 0, stagger: 0.25 });
+		.fromTo(
+			'li',
+			{ opacity: 0, y: 10 },
+			{ opacity: 1, y: 0, stagger: 0.25, ease: 'powerIn', duration: 0.25 }
+		);
 };
 
 const close = () => {
-	timeline.reverse();
+	timeline
+		.to('li', {
+			opacity: 0,
+			y: 10,
+			duration: 0.25,
+			stagger: 0.25,
+			reversed: true,
+		})
+		.to('.navMenu', { opacity: 0, x: -100, duration: 0.25 })
+		.then(() => {
+			showMenu.value = false;
+		});
 };
 onMounted(() => {
 	gsap.fromTo(
@@ -145,7 +166,7 @@ onMounted(() => {
 		{
 			opacity: 1,
 			y: 0,
-			duration: 0.35,
+			// duration: 0.35,
 			delay: 1.65,
 			ease: 'linear',
 		}
