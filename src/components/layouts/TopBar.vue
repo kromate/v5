@@ -50,8 +50,8 @@
 							<a href="/" class="chakra"> Contact </a>
 						</li>
 						<span class="menu-link">
-							<div class="mt-20 gap-12 items-center flex">
-								<li>
+							<li class="mt-20 gap-12 items-center flex">
+								<span>
 									<a
 										href="https://github.com/kromate"
 										target="_blank"
@@ -59,9 +59,9 @@
 									>
 										<github class="nav-icon" />
 									</a>
-								</li>
+								</span>
 
-								<li>
+								<span>
 									<a
 										href="https://twitter.com/kromate_24"
 										target="_blank"
@@ -69,8 +69,8 @@
 									>
 										<twitter class="nav-icon" />
 									</a>
-								</li>
-								<li>
+								</span>
+								<span>
 									<a
 										href="https://www.instagram.com/kromate_24/"
 										target="_blank"
@@ -78,8 +78,8 @@
 									>
 										<instagram class="nav-icon" />
 									</a>
-								</li>
-								<li>
+								</span>
+								<span>
 									<a
 										href="https://www.youtube.com/c/Kromate_24"
 										target="_blank"
@@ -87,8 +87,8 @@
 									>
 										<youtube class="nav-icon" />
 									</a>
-								</li>
-								<li>
+								</span>
+								<span>
 									<a
 										href="https://www.linkedin.com/in/kromate/"
 										target="_blank"
@@ -96,8 +96,8 @@
 									>
 										<linkedin class="nav-icon" />
 									</a>
-								</li>
-							</div>
+								</span>
+							</li>
 						</span>
 					</ul>
 				</div>
@@ -141,7 +141,7 @@ const enter = (el: any, done: any) => {
 		.fromTo(
 			'li',
 			{ opacity: 0, y: 10 },
-			{ opacity: 1, y: 0, stagger: 0.25, ease: 'linear', duration: 0.15 }
+			{ opacity: 1, y: 0, stagger: 0.25, ease: 'linear', duration: 0.25 }
 		);
 };
 
