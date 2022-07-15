@@ -115,7 +115,9 @@ import { onMounted } from 'vue';
 
 const timeline = gsap.timeline();
 const showMenu = ref(false);
-
+const toggleMenu = () => {
+	showMenu.value = !showMenu.value;
+};
 const beforeEnter = (el: any) => {
 	el.style.opacity = 0;
 	el.style.transform = 'translateX(-100px)';
