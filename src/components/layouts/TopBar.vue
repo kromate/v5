@@ -146,7 +146,7 @@ const enter = (el: any, done: any) => {
 };
 
 const close = () => {
-	timeline.to('.navMenu', { opacity: 0, x: -100, duration: 0.25 }).then(() => {
+	gsap.to('.navMenu', { opacity: 0, x: -100, duration: 0.25 }).then(() => {
 		showMenu.value = false;
 	});
 };
