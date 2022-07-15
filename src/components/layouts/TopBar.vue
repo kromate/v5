@@ -113,45 +113,28 @@ import instagram from '@/assets/icons/instagram.vue';
 import gsap from 'gsap';
 import { onMounted } from 'vue';
 
-const timeline = gsap.timeline({ duration: 0.25 });
+const timeline = gsap.timeline();
 const showMenu = ref(false);
-const toggleMenu = () => {
-	if (!showMenu.value) {
-		showMenu.value = true;
-	} else {
-		close();
-	}
-};
 
 const beforeEnter = (el: any) => {
 	el.style.opacity = 0;
 	el.style.transform = 'translateX(-100px)';
 };
 const enter = (el: any, done: any) => {
-	console.log(1);
-	timeline.play(0);
-	timeline.to(el, {
-		opacity: 1,
-		x: 0,
-		duration: 0.25,
-		onComplete: done,
-	});
-	// .to('.topIcon', {
-	// 	color: 'black',
-	// })
-	// .fromTo(
-	// 	'li',
-	// 	{ opacity: 0, y: 10 },
-	// 	{ opacity: 1, y: 0, stagger: 0.25, duration: 0.25 }
-	// );
+	timeline
+		.to(el, {
+			opacity: 1,
+			x: 0,
+			onComplete: done(),
+		})
+		.to('.topIcon', {
+			color: 'black',
+		})
+		.fromTo('li', { opacity: 0, y: 10 }, { opacity: 1, y: 0, stagger: 0.25 });
 };
 
-const close = async () => {
-	await timeline.reverse();
-	showMenu.value = false;
-	// setTimeout(() => {
-	// 	showMenu.value = false;
-	// }, 3500);
+const close = () => {
+	timeline.reverse();
 };
 onMounted(() => {
 	gsap.fromTo(
