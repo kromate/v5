@@ -5,27 +5,41 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--fz-heading: 32px;
+	--green: #00ab44;
+	--secondary: #8892b0;
+	--primary: #111111;
+	--fz-xxs: 12px;
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
+    --fz-heading: 32px;
+}
+
 * {
 	font-family: 'Roboto', sans-serif;
 }
 
 html {
-  scroll-behavior: smooth;
-    scroll-padding: 10rem;
+	scroll-behavior: smooth;
+	scroll-padding: 10rem;
 }
 
 ::-webkit-scrollbar {
-  width: 0px; 
-  background: #8892b0; /* Optional: just make scrollbar invisible */
+	width: 0px;
+	background: #8892b0; /* Optional: just make scrollbar invisible */
 }
 
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-  background: #00ab4473;
-  opacity: 0;
-  border-radius: 40px;
+	background: #00ab4473;
+	opacity: 0;
+	border-radius: 40px;
 }
-
 
 body {
 	@apply bg-primary;
@@ -33,7 +47,6 @@ body {
 section {
 	@apply mx-auto md:px-20 px-8 lg:px-0 text-white  min-h-screen;
 	max-width: 1000px !important;
-
 }
 .text-large {
 	font-size: clamp(40px, 8.8vw, 60px);
@@ -68,25 +81,75 @@ section {
 		@apply flex justify-center items-center;
 	}
 	.big-btn {
-		@apply text-green border border-green py-3 px-10 rounded cursor-pointer relative;
+		@apply text-green border border-green py-3 px-10 rounded cursor-pointer relative text-base transition-all duration-500;
 		&:focus,
 		&:active {
 			background-color: #ffffff30;
 			outline: none;
 		}
 		&:before {
+			@apply bg-light_green;
 			content: '';
 			position: absolute;
-			background: #00ab442b;
 			bottom: 0;
 			left: 0;
 			right: 100%;
 			top: 0;
 			z-index: -1;
-			transition: right 0.35s ease-out;
+			transition: right 0.55s ease-out;
+		}
+		&:hover {
+			@apply text-white;
 		}
 		&:hover:before {
-			right: 0;
+			@apply right-0;
+		}
+	}
+
+	.numbered-heading {
+		display: flex;
+		align-items: center;
+		position: relative;
+		margin: 10px 0 40px;
+		width: 100%;
+		font-size: clamp(26px, 5vw, var(--fz-heading));
+		white-space: nowrap;
+
+		&:before {
+			position: relative;
+			bottom: 4px;
+			counter-increment: section;
+			content: '0' counter(section) '.';
+			margin-right: 10px;
+			color: var(--green);
+			font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+			font-weight: 400;
+
+			@media (max-width: 480px) {
+				margin-bottom: -3px;
+				margin-right: 5px;
+			}
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			position: relative;
+			top: -5px;
+			width: 300px;
+			height: 1px;
+			margin-left: 20px;
+			background-color: var(--secondary);
+
+			@media (max-width: 1080px) {
+				width: 200px;
+			}
+			@media (max-width: 768px) {
+				width: 100%;
+			}
+			@media (max-width: 600px) {
+				margin-left: 10px;
+			}
 		}
 	}
 }

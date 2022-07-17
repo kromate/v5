@@ -5,8 +5,8 @@ module.exports = {
 			colors: {
 				primary: '#111111',
 				secondary: '#8892b0',
-				green: '#00ab44',
-				light_green: '#89c4a0',
+				green: 'var(--green)',
+				light_green: '#3adb282f',
 			},
 		},
 	},
