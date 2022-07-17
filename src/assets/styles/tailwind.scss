@@ -1,24 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@100;300;400;700;900&display=swap');
-
+@import url('./variables.scss');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--fz-heading: 32px;
-	--green: #00ab44;
-	--secondary: #8892b0;
-	--primary: #111111;
-	--fz-xxs: 12px;
-    --fz-xs: 13px;
-    --fz-sm: 14px;
-    --fz-md: 16px;
-    --fz-lg: 18px;
-    --fz-xl: 20px;
-    --fz-xxl: 22px;
-    --fz-heading: 32px;
-}
+
 
 * {
 	font-family: 'Roboto', sans-serif;
