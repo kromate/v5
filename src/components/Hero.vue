@@ -14,9 +14,9 @@
 			possible.
 		</p>
 
-		<a href="" class="animate big-btn mt-5" target="_blank" rel="noreferrer">
+		<span href="" class="animate big-btn mt-5" target="_blank" rel="noreferrer">
 			Resume
-		</a>
+		</span>
 	</section>
 </template>
 
@@ -32,10 +32,10 @@ onMounted(() => {
 		{
 			opacity: 1,
 			y: 0,
-			stagger: 0.2,
-			duration: 0.4,
+			stagger: 0.25,
+			duration: 0.5,
 			delay: mql.matches ? 2 : 3.35,
-			ease: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
+			ease: 'powerOut',
 		}
 	);
 });

@@ -1,6 +1,6 @@
 <template>
-	<div class="fixed inset-0 h-screen w-screen" v-if="show">
-		<div class="center h-screen w-screen bg-primary logo-container">
+	<div class="absolute inset-0 h-screen w-screen " v-if="show">
+		<div class="center h-screen w-screen bg-primary logo-container !bg-black">
 			<div class="relative center text-white pos text-7xl">
 				<img
 					src="../assets/images/border.svg"
