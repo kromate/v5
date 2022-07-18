@@ -74,6 +74,7 @@ section {
         background-color: #2f293ae8;
         text-align: center;
         border: 1px solid var(--secondary);
+        color: white;
     }
 
     .big-btn {
@@ -93,9 +94,6 @@ section {
             top: 0;
             z-index: -1;
             transition: right 0.55s ease-out;
-        }
-        &:hover {
-            @apply text-white;
         }
         &:hover:before {
             @apply right-0;
