@@ -1,3 +1,4 @@
+
 <template>
 	<section id="about">
 		<h2 class="numbered-heading chakra">About Me</h2>
@@ -24,15 +25,20 @@
 				</ul>
 			</div>
 
-			<div class="imgContainer">
-				<img class="img w-[250px] rounded-md" src="../assets/images/me.png" alt="Headshot" />
+			<div class="flex flex-col gap-4 mt-8 md:mt-0">
+				<img class="img w-[270px] rounded-md" src="../assets/images/me.png" alt="Headshot" />
+				<span
+					class="w-[270px] text-sm text-center"
+				>This bitmoji would have to do till I can take a proper headshot 😅</span>
 			</div>
 		</div>
 	</section>
 </template>
 
 <script setup lang="ts">
-let skills = [
+import { ref } from "@vue/reactivity";
+
+const skills = ref([
 	"Javascript",
 	"Vue & Vuex",
 	"Ionic",
@@ -48,7 +54,7 @@ let skills = [
 	"WebRTC",
 	"Animations",
 	"APIs"
-];
+]);
 </script>
 
 <style scoped lang="scss">
