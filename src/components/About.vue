@@ -2,12 +2,12 @@
 	<section id="about">
 		<h2 class="numbered-heading chakra">About Me</h2>
 
-		<div class="inner">
+		<div class="inner items-start justify-items-center">
 			<div class="styledText">
 				<div>
 					<p>
 						Ohayo! 👋🏾 My name is Anthony Akpan. I am a Frontend Engineer who loves building crazy ideas and trying out new things.
-						I got into programming in 2015 when I found a Python e-book and then switched from Python to Web Development in 2017.
+						I got into programming in 2017 when I found a Python e-book and then switched from Python to Web Development in 2018.
 					</p>
 
 					<p>
@@ -24,9 +24,9 @@
 				</ul>
 			</div>
 
-			<!-- <div class="imgContainer">
-				<img class="img" src="../assets/images/me.png" alt="Headshot" />
-			</div>-->
+			<div class="imgContainer">
+				<img class="img w-[250px] rounded-md" src="../assets/images/me.png" alt="Headshot" />
+			</div>
 		</div>
 	</section>
 </template>
