@@ -3,7 +3,7 @@
 	<section id="about">
 		<h2 class="numbered-heading chakra">About Me</h2>
 
-		<div class="inner items-start justify-items-center">
+		<div class="inner items-start justify-items-end">
 			<div class="styledText">
 				<div>
 					<p>
@@ -19,13 +19,13 @@
 					</p>
 				</div>
 
-				<p class="italic mt-2 chakra">Below are a list of my tools and languages</p>
+				<p class="italic my-3 chakra">Below are a list of my tools and languages</p>
 				<ul class="flex gap-2.5 items-center mt-1.5 flex-wrap">
 					<li v-for="skill in skills" :key="skill" class="pill">{{skill}}</li>
 				</ul>
 			</div>
 
-			<div class="flex flex-col gap-4 mt-8 md:mt-0">
+			<div class="flex flex-col gap-4 mt-1 md:mt-0">
 				<img class="img w-[270px] rounded-md" src="../assets/images/me.png" alt="Headshot" />
 				<span
 					class="w-[270px] text-sm text-center"
@@ -67,7 +67,7 @@ const skills = ref([
 		grid-gap: 50px;
 
 		@media (max-width: 768px) {
-			display: block;
+			@apply flex flex-col justify-center items-center;
 		}
 	}
 }
