@@ -1,7 +1,6 @@
-import Experience from '@/components/Experience.vue';
 <template>
 	<section id="experience">
-		<h2 class="numbered-heading chakra" data-num="02.">My Experience and Timeline</h2>
+		<h2 class="numbered-heading chakra" data-num="02.">My Experience</h2>
 		<div class="relative mt-14">
 			<div class="absolute z-0 border-r border-purple ml-4 top-12 bottom-24 md:bottom-12 md:ml-8"></div>
 			<div class="relative z-10 flex flex-col gap-4">
