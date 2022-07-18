@@ -3,9 +3,7 @@
 		<div class="sm:leading-[5rem] leading-[3rem]">
 			<h1 class="animate text-xl text-green chakra">Hi, my name is</h1>
 			<h2 class="animate text-large text-[#ccd6f6]">Anthony Akpan.</h2>
-			<h3 class="animate text-large text-secondary">
-				I solve problems and create magic.
-			</h3>
+			<h3 class="animate text-large text-secondary">I solve problems and create magic.</h3>
 		</div>
 		<p class="animate text-secondary max-w-2xl mt-2">
 			I'm a software engineer specialized in building Frontend applications,
@@ -14,20 +12,18 @@
 			possible.
 		</p>
 
-		<span href="" class="animate big-btn mt-5" target="_blank" rel="noreferrer">
-			Resume
-		</span>
+		<span href class="animate big-btn mt-5" target="_blank" rel="noreferrer">Resume</span>
 	</section>
 </template>
 
 <script setup lang="ts">
-import gsap from 'gsap';
-import { onMounted } from 'vue';
-const mql = window.matchMedia('(max-width: 700px)');
+import gsap from "gsap";
+import { onMounted } from "vue";
+const mql = window.matchMedia("(max-width: 700px)");
 // console.log();
 onMounted(() => {
 	gsap.fromTo(
-		'.animate',
+		".animate",
 		{ opacity: 0, y: 20 },
 		{
 			opacity: 1,
@@ -35,7 +31,7 @@ onMounted(() => {
 			stagger: 0.25,
 			duration: 0.5,
 			delay: mql.matches ? 2 : 3.35,
-			ease: 'powerOut',
+			ease: "powerOut"
 		}
 	);
 });

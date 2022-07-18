@@ -59,7 +59,6 @@ const skills = ref([
 
 <style scoped lang="scss">
 #about {
-	max-width: 900px;
 	color: var(--secondary);
 	.inner {
 		display: grid;

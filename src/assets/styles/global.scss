@@ -23,8 +23,7 @@ body {
     @apply bg-primary;
 }
 section {
-    @apply mx-auto md:px-20 px-8 my-8 lg:px-0 text-white  min-h-screen;
-    max-width: 1000px !important;
+    @apply mx-auto md:px-20 px-8 my-8 lg:px-0 text-white  min-h-screen w-full max-w-[1000px];
 }
 
 @layer utilities {
