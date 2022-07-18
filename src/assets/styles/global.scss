@@ -120,7 +120,7 @@ section {
         position: relative;
         bottom: 0px;
         counter-increment: section;
-        content: '0' counter(section) '.';
+        content: attr(data-num);
         margin-right: 10px;
         color: var(--green);
         font-size: clamp(26px, 7vw, var(--fz-xxl));

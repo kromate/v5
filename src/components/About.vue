@@ -1,7 +1,7 @@
 
 <template>
 	<section id="about">
-		<h2 class="numbered-heading chakra">About Me</h2>
+		<h2 class="numbered-heading chakra" data-num="01.">About Me</h2>
 
 		<div class="inner items-start justify-items-end">
 			<div class="styledText">
@@ -53,7 +53,8 @@ const skills = ref([
 	"WebSockets",
 	"WebRTC",
 	"Animations",
-	"APIs"
+	"APIs",
+	"plugins"
 ]);
 </script>
 
