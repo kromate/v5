@@ -59,7 +59,6 @@ let skills = [
 		display: grid;
 		grid-template-columns: 3fr 2fr;
 		grid-gap: 50px;
-		place-items: center;
 
 		@media (max-width: 768px) {
 			display: block;

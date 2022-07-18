@@ -1,12 +1,8 @@
 <template>
-	<div class="absolute inset-0 h-screen w-screen " v-if="show">
+	<div class="fixed inset-0 h-screen w-screen z-50" v-if="show">
 		<div class="center h-screen w-screen bg-primary logo-container !bg-black">
 			<div class="relative center text-white pos text-7xl">
-				<img
-					src="../assets/images/border.svg"
-					alt="border"
-					class="logo-border absolute w-40 rotate-45"
-				/>
+				<img src="../assets/images/border.svg" alt="border" class="logo-border absolute w-40 rotate-45" />
 				<span class="p-10 font-semibold">K</span>
 			</div>
 		</div>
@@ -14,8 +10,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import { scrollControl } from '@/composibles/controls';
+import { ref, onMounted } from "vue";
+import { scrollControl } from "@/composibles/controls";
 
 const { enableScroll } = scrollControl();
 const show = ref(true);

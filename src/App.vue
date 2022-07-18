@@ -1,6 +1,6 @@
 <template>
 	<DefaultLayout>
-		<Loader />
+	
 		<Hero />
 		<About />
 		<Experience />
@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import Loader from '@/components/Loader.vue';
+
 import Hero from '@/components/Hero.vue';
 import About from '@/components/About.vue';
 import Experience from '@/components/Experience.vue';

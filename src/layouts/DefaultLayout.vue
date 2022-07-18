@@ -1,5 +1,6 @@
 <template>
 	<div class="flex-col center w-full" ref="body">
+		<Loader />
 		<TopBar />
 		<LeftNav />
 		<RightNav />
@@ -9,9 +10,10 @@
 </template>
 
 <script setup lang="ts">
-import LeftNav from '@/components/layouts/LeftNav.vue';
-import RightNav from '@/components/layouts/RightNav.vue';
-import TopBar from '@/components/layouts/TopBar.vue';
+import LeftNav from "@/components/layouts/LeftNav.vue";
+import RightNav from "@/components/layouts/RightNav.vue";
+import TopBar from "@/components/layouts/TopBar.vue";
+import Loader from "@/components/Loader.vue";
 </script>
 
 <style>
