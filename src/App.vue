@@ -1,22 +1,7 @@
 <template>
-	<DefaultLayout>
-	
-		<Hero />
-		<About />
-		<Experience />
-		<Work />
-		<Contact />
-	</DefaultLayout>
+	<router-view />
 </template>
 
-<script setup lang="ts">
-
-import Hero from '@/components/Hero.vue';
-import About from '@/components/About.vue';
-import Experience from '@/components/Experience.vue';
-import Work from '@/components/Work.vue';
-import Contact from '@/components/Contact.vue';
-import DefaultLayout from '@/layouts/DefaultLayout.vue';
-</script>
+<script setup lang="ts"></script>
 
 <style scoped></style>
