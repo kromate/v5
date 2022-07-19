@@ -25,8 +25,6 @@
 					</header>
 					<footer class="flex gap-2 mt-5 flex-wrap">
 						<span class="pill !py-1" v-for="n in 5" :key="n">firebase</span>
-						<!-- <span class="pill">vue</span>
-						<span class="pill">Nuxt</span> -->
 					</footer>
 				</div>
 			</li>

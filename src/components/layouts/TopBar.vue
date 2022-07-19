@@ -1,5 +1,7 @@
 <template>
-	<nav class="top-0 w-full px-4 py-2 z-30 select-none block md:hidden absolute shadow-xl">
+	<nav
+		class="top-0 w-full px-4 py-2 z-30 select-none block md:hidden absolute shadow-xl"
+	>
 		<div
 			class="container flex flex-wrap items-center justify-between md:py-5 py-3 px-4 mx-auto md:flex-row max-w-7xl"
 		>
@@ -11,7 +13,11 @@
 				<logo class="h-10 w-10" />
 			</a>
 
-			<div @click="toggleMenu" class="menu-btn z-30" :class="{ active: showMenu }">
+			<div
+				@click="toggleMenu"
+				class="menu-btn z-30"
+				:class="{ active: showMenu }"
+			>
 				<span
 					:class="[
 						showMenu
@@ -25,45 +31,68 @@
 	</nav>
 
 	<transition appear @enter="enter" @before-enter="beforeEnter" :css="false">
-		<div v-if="showMenu" class="navMenu w-full gap-4 fixed bg-secondary inset-0 h-full p-4 z-20">
+		<div
+			v-if="showMenu"
+			class="navMenu w-full gap-4 fixed bg-secondary inset-0 h-full p-4 z-20"
+		>
 			<ul class="flex flex-col items-center pt-36 h-full">
 				<li class="menu-link">
-					<a href="#about" class="chakra" @click="close">About</a>
+					<a href="/#about" class="chakra" @click="close">About</a>
 				</li>
 				<li class="menu-link">
-					<a href="#experience" class="chakra" @click="close">Experience</a>
+					<a href="/#experience" class="chakra" @click="close">Experience</a>
 				</li>
 				<li class="menu-link">
-					<a href="#works" class="chakra" @click="close">Works</a>
+					<a href="/#works" class="chakra" @click="close">Works</a>
 				</li>
 				<li class="menu-link">
-					<a href="#contact" class="chakra" @click="close">Contact</a>
+					<a href="/#contact" class="chakra" @click="close">Contact</a>
 				</li>
 				<span class="menu-link">
 					<li class="mt-20 gap-12 items-center flex">
 						<span>
-							<a href="https://github.com/kromate" target="_blank" rel="noopener noreferrer">
+							<a
+								href="https://github.com/kromate"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<github class="nav-icon" />
 							</a>
 						</span>
 
 						<span>
-							<a href="https://twitter.com/kromate_24" target="_blank" rel="noopener noreferrer">
+							<a
+								href="https://twitter.com/kromate_24"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<twitter class="nav-icon" />
 							</a>
 						</span>
 						<span>
-							<a href="https://www.instagram.com/kromate_24/" target="_blank" rel="noopener noreferrer">
+							<a
+								href="https://www.instagram.com/kromate_24/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<instagram class="nav-icon" />
 							</a>
 						</span>
 						<span>
-							<a href="https://www.youtube.com/c/Kromate_24" target="_blank" rel="noopener noreferrer">
+							<a
+								href="https://www.youtube.com/c/Kromate_24"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<youtube class="nav-icon" />
 							</a>
 						</span>
 						<span>
-							<a href="https://www.linkedin.com/in/kromate/" target="_blank" rel="noopener noreferrer">
+							<a
+								href="https://www.linkedin.com/in/kromate/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<linkedin class="nav-icon" />
 							</a>
 						</span>
@@ -75,16 +104,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "@vue/reactivity";
-import logo from "@/assets/icons/logo.vue";
-import github from "@/assets/icons/github.vue";
-import twitter from "@/assets/icons/twitter.vue";
-import youtube from "@/assets/icons/youtube.vue";
-import linkedin from "@/assets/icons/linkedin.vue";
-import instagram from "@/assets/icons/instagram.vue";
-import gsap from "gsap";
-import { onMounted } from "vue";
-import { scrollControl } from "@/composibles/controls";
+import { ref } from '@vue/reactivity';
+import logo from '@/assets/icons/logo.vue';
+import github from '@/assets/icons/github.vue';
+import twitter from '@/assets/icons/twitter.vue';
+import youtube from '@/assets/icons/youtube.vue';
+import linkedin from '@/assets/icons/linkedin.vue';
+import instagram from '@/assets/icons/instagram.vue';
+import gsap from 'gsap';
+import { onMounted } from 'vue';
+import { scrollControl } from '@/composibles/controls';
 
 const { enableScroll, disableScroll } = scrollControl();
 
@@ -100,7 +129,7 @@ const toggleMenu = () => {
 };
 const beforeEnter = (el: any) => {
 	el.style.opacity = 0;
-	el.style.transform = "translateX(-100px)";
+	el.style.transform = 'translateX(-100px)';
 };
 const enter = (el: any, done: any) => {
 	timeline
@@ -108,31 +137,31 @@ const enter = (el: any, done: any) => {
 			opacity: 1,
 			x: 0,
 			duration: 0.25,
-			onComplete: done()
+			onComplete: done(),
 		})
 		.fromTo(
-			"li",
+			'li',
 			{ opacity: 0, y: 10 },
-			{ opacity: 1, y: 0, stagger: 0.25, ease: "linear", duration: 0.25 }
+			{ opacity: 1, y: 0, stagger: 0.25, ease: 'linear', duration: 0.25 }
 		);
 };
 
 const close = () => {
-	gsap.to(".navMenu", { opacity: 0, x: -100, duration: 0.25 }).then(() => {
+	gsap.to('.navMenu', { opacity: 0, x: -100, duration: 0.25 }).then(() => {
 		showMenu.value = false;
 		enableScroll();
 	});
 };
 onMounted(() => {
 	gsap.fromTo(
-		"nav",
+		'nav',
 		{ opacity: 0, y: -20 },
 		{
 			opacity: 1,
 			y: 0,
 			// duration: 0.35,
 			delay: 1.65,
-			ease: "linear"
+			ease: 'linear',
 		}
 	);
 });
@@ -177,7 +206,7 @@ onMounted(() => {
 .menu-btn span,
 .menu-btn span::before,
 .menu-btn span::after {
-	content: "";
+	content: '';
 	position: absolute;
 	width: 25px;
 	height: 3px;
