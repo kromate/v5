@@ -117,7 +117,6 @@ import { scrollControl } from '@/composibles/controls';
 
 const { enableScroll, disableScroll } = scrollControl();
 
-const timeline = gsap.timeline({ duration: 0.001 });
 const showMenu = ref(false);
 const toggleMenu = () => {
 	if (!showMenu.value) {
@@ -132,18 +131,20 @@ const beforeEnter = (el: any) => {
 	el.style.transform = 'translateX(-100px)';
 };
 const enter = (el: any, done: any) => {
-	timeline
+	gsap
 		.to(el, {
 			opacity: 1,
 			x: 0,
 			duration: 0.25,
 			onComplete: done(),
 		})
-		.fromTo(
-			'li',
-			{ opacity: 0, y: 10 },
-			{ opacity: 1, y: 0, stagger: 0.25, ease: 'linear', duration: 0.25 }
-		);
+		.then(() => {
+			gsap.fromTo(
+				'li',
+				{ opacity: 0, y: 10 },
+				{ opacity: 1, y: 0, stagger: 0.25, ease: 'linear', duration: 0.25 }
+			);
+		});
 };
 
 const close = () => {
@@ -168,6 +169,9 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
+li {
+	opacity: 0;
+}
 .nav-icon {
 	transform: scale(1.5);
 }

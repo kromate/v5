@@ -43,11 +43,11 @@ import folder from '@/assets/icons/folder.vue';
 import redirect from '@/assets/icons/redirect.vue';
 import { gsap } from 'gsap';
 
-const beforeEnter = (el: HTMLBaseElement) => {
+const beforeEnter = (el: any) => {
 	el.style.opacity = '0';
 	el.style.transform = 'translateY(100px)';
 };
-const enter = (el: HTMLBaseElement, done: () => void) => {
+const enter = (el: any, done: () => void) => {
 	gsap.to(el, {
 		opacity: 1,
 		y: 0,
