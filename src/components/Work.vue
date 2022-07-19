@@ -2,7 +2,13 @@
 	<section id="works">
 		<h2 class="numbered-heading chakra" data-num="03.">my projects</h2>
 
-		<ul class="grid grid-cols-3">
+		<transition-group
+			appear
+			class="grid grid-cols-3"
+			@before-enter="beforeEnter"
+			@enter="enter"
+			tag="ul"
+		>
 			<li v-for="n in 5" :key="n">
 				<div class="card bg-purple rounded-sm border-">
 					<header class="w-full">
@@ -28,13 +34,28 @@
 					</footer>
 				</div>
 			</li>
-		</ul>
+		</transition-group>
 	</section>
 </template>
 
 <script setup lang="ts">
 import folder from '@/assets/icons/folder.vue';
 import redirect from '@/assets/icons/redirect.vue';
+import { gsap } from 'gsap';
+
+const beforeEnter = (el: HTMLBaseElement) => {
+	el.style.opacity = '0';
+	el.style.transform = 'translateY(100px)';
+};
+const enter = (el: HTMLBaseElement, done: () => void) => {
+	gsap.to(el, {
+		opacity: 1,
+		y: 0,
+		duration: 0.5,
+		onComplete: done,
+		delay: parseInt(el.dataset.index as string) * 0.1,
+	});
+};
 </script>
 
 <style scoped>
