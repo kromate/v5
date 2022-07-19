@@ -3,18 +3,41 @@
 		<h2 class="numbered-heading chakra" data-num="03.">my projects</h2>
 
 		<ul class="grid grid-cols-3">
-			<li v-for="n in 10" :key="n">
+			<li v-for="n in 5" :key="n">
 				<div class="card bg-purple rounded-sm border-">
-					<header>
-						<img src="../assets/images/logo.png" alt />
+					<header class="w-full">
+						<div class="flex items-center justify-between w-full">
+							<folder class="text-4xl text-green" />
+							<div class="flex items-center">
+								<redirect class="text-sm text-secondary" />
+							</div>
+						</div>
+
+						<h2 class="text-white font-semibold text-2xl mt-5 mb-2">
+							Stranerd
+						</h2>
+						<p class="text-secondary">
+							Worked on a variety of projects from the landing page to the main
+							application, were i worked with other developers to deliver timely
+							updates and bug fixes when neccessary and meeting both business
+							and custom demands on time
+						</p>
 					</header>
+					<footer class="flex gap-2 mt-5 flex-wrap">
+						<span class="pill !py-1" v-for="n in 5" :key="n">firebase</span>
+						<!-- <span class="pill">vue</span>
+						<span class="pill">Nuxt</span> -->
+					</footer>
 				</div>
 			</li>
 		</ul>
 	</section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import folder from '@/assets/icons/folder.vue';
+import redirect from '@/assets/icons/redirect.vue';
+</script>
 
 <style scoped>
 ul {
