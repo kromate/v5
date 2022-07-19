@@ -54,7 +54,8 @@ const skills = ref([
 	"WebRTC",
 	"Animations",
 	"APIs",
-	"plugins"
+	"plugins",
+	"extensions"
 ]);
 </script>
 
