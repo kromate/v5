@@ -74,7 +74,7 @@ section {
         background-color: #2f293ae8;
         text-align: center;
         border: 1px solid var(--secondary);
-        color: white;
+        color: var(--white);
     }
 
     .big-btn {
@@ -108,7 +108,7 @@ section {
     margin: 10px 0 40px;
     font-size: clamp(26px, 5vw, var(--fz-heading));
     white-space: nowrap;
-    color: var(--secondary);
+    color: var(--white);
     background: #000;
     width: fit-content;
     padding: 2px 20px;

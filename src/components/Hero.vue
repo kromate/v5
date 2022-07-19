@@ -2,7 +2,7 @@
 	<section id="hero" class="flex flex-col items-start justify-center">
 		<div class="sm:leading-[5rem] leading-[3rem]">
 			<h1 class="animate text-xl text-green chakra">Hi, my name is</h1>
-			<h2 class="animate text-large text-[#ccd6f6]">Anthony Akpan.</h2>
+			<h2 class="animate text-large text-white">Anthony Akpan.</h2>
 			<h3 class="animate text-large text-secondary">I solve problems and create magic.</h3>
 		</div>
 		<p class="animate text-secondary max-w-2xl mt-2">
