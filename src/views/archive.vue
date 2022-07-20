@@ -112,7 +112,7 @@ import redirect from '@/assets/icons/redirect.vue';
 		td {
 			&.year {
 				padding-right: 20px;
-				color: var(--green);
+				color: var(--purple);
 				@media (max-width: 768px) {
 					padding-right: 10px;
 					font-size: var(--fz-sm);
