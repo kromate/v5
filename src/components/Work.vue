@@ -10,10 +10,10 @@
 			tag="ul"
 		>
 			<li v-for="n in 5" :key="n">
-				<div class="card bg-purple rounded-sm border-">
+				<div class="card bg-badge rounded-sm border-">
 					<header class="w-full">
 						<div class="flex items-center justify-between w-full">
-							<folder class="text-4xl text-green" />
+							<folder class="text-4xl text-purple" />
 							<div class="flex items-center">
 								<redirect class="text-sm text-secondary" />
 							</div>

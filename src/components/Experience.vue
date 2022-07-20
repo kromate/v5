@@ -42,9 +42,9 @@ const experiences = ref([
 
 <style scoped>
 .card {
-	@apply w-full rounded-md bg-purple border border-secondary flex flex-col items-center gap-4 justify-between p-4 md:flex-row md:gap-10 md:p-8 text-secondary;
+	@apply w-full rounded-md bg-badge border border-secondary flex flex-col items-center gap-4 justify-between p-4 md:flex-row md:gap-10 md:p-8 text-secondary;
 }
 .card-circle {
-	@apply text-white text-sm font-bold border border-secondary flex items-center justify-center rounded-full bg-purple flex-shrink-0 h-8 w-8 md:text-xl md:h-16 md:w-16;
+	@apply text-white text-sm font-bold border border-secondary flex items-center justify-center rounded-full bg-badge flex-shrink-0 h-8 w-8 md:text-xl md:h-16 md:w-16;
 }
 </style>

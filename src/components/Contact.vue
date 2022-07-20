@@ -6,7 +6,7 @@
 				<span class="chakra">That's all folks</span>
 
 				<br />
-				<span class="text-4xl md:text-6xl font-bold text-green chakra">Get in Touch</span>
+				<span class="text-4xl md:text-6xl font-bold text-purple chakra">Get in Touch</span>
 				<br />If you would love to work with me, collaborate on a project or just say "Hi"
 				<span
 					class="chakra"
