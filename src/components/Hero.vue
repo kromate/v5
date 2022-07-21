@@ -12,7 +12,7 @@
 			possible.
 		</p>
 
-		<span href class="animate big-btn mt-5" target="_blank" rel="noreferrer">Resume</span>
+		<a href="https://docs.google.com/document/d/1trkAjxyYv9xF7cXyCfz2BebI3CnuZmhlSsHeRf9_fyQ/edit?usp=sharing" class="animate big-btn mt-5" target="_blank" rel="noreferrer">Resume</a>
 	</section>
 </template>
 

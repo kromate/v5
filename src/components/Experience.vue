@@ -52,17 +52,17 @@ const experiences = ref([
 	},
 	{
 		title: 'B.sc in Computer Engineering',
-		desc: 'underwent a B.Sc program in computer Engineering in the university of lagos',
+		desc: 'I underwent a B.Sc program in computer Engineering in the university of lagos.',
 	},
 	{
-		title: 'Andela Learning Community',
-		link: { name: 'ALC', url: 'https://andela.com/alc/' },
-		desc: 'I was selected for the Andela Learning Community Schoolship in both mobile and web track which ran for a year (2019-2020)',
+		title: 'Andela devC training',
+		link: { name: 'devC', url: 'https://devctraining.andela.com/' },
+		desc: `I Participated in the Andela Learning Community devC program in which I learnt to improve my web development skills and work in a team.`,
 	},
 	{
 		title: 'Google Africa Developer sholarship',
 		link: { name: 'GADS', url: 'https://gads.andela.com/' },
-		desc: `I Participated and qualified for the GADS 2019 program, it was during this program I deepened my frontend development skill and acquired new skills i.e backend development with node.
+		desc: `I qualified for the GADS 2019 program, it was during this program I deepened my frontend development skill and acquired new skills i.e backend development with node.
 Later went on to become a Mentor for the program the following year GADS 2020`,
 	},
 	{

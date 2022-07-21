@@ -3,7 +3,7 @@
 		aria-label="site"
 		class="layout-line border-l md:right-0 right-5 chakra flex-col items-center"
 	>
-		<ul class="gap-5 pt-2">
+		<ul class="gap-5 pt-2 links">
 			<li class="nav-link">
 				<a href="/#about">About</a>
 			</li>
@@ -29,6 +29,7 @@
 <script setup lang="ts">
 import gsap from 'gsap';
 import { onMounted } from 'vue';
+import { scrollpsy } from '@/composibles/controls';
 
 onMounted(() => {
 	gsap.fromTo(
@@ -43,6 +44,9 @@ onMounted(() => {
 			ease: 'linear',
 		}
 	);
+
+scrollpsy()
+
 });
 </script>
 
