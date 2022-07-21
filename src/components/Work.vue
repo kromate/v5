@@ -1,7 +1,9 @@
 <template>
 	<section id="works">
 		<h2 class="numbered-heading chakra" data-num="03.">my projects</h2>
-
+		<router-link to="/archive" class="text-orange"
+			>View a full list of my projects</router-link
+		>
 		<transition-group
 			appear
 			class="grid grid-cols-3"
@@ -35,6 +37,9 @@
 				</div>
 			</li>
 		</transition-group>
+		<!-- <router-link to="/archive" class="big-btn mt-5"
+			>View Project Archive</router-link
+		> -->
 	</section>
 </template>
 

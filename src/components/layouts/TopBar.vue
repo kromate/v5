@@ -1,15 +1,12 @@
 <template>
 	<nav
-		class="top-0 w-full px-4 py-2 z-30 select-none block md:hidden absolute shadow-xl"
+		id="header"
+		class="bg-[#211e25c6] top-0 w-full px-4 py-2 z-30 select-none block md:hidden fixed shadow-xl transition-all duration-500"
 	>
 		<div
 			class="container flex flex-wrap items-center justify-between md:py-5 py-3 px-4 mx-auto md:flex-row max-w-7xl"
 		>
-			<a
-				href="#"
-				class="transition-all duration-300"
-				:class="[showMenu ? 'text-primary' : 'text-secondary', 'z-30']"
-			>
+			<a href="#" class="transition-all duration-300 text-secondary z-30">
 				<logo class="h-10 w-10" />
 			</a>
 
@@ -19,12 +16,7 @@
 				:class="{ active: showMenu }"
 			>
 				<span
-					:class="[
-						showMenu
-							? 'bg-primary before:bg-primary after:bg-primary'
-							: 'bg-secondary before:bg-secondary after:bg-secondary',
-					]"
-					class
+					class="bg-secondary before:bg-secondary after:bg-secondary"
 				></span>
 			</div>
 		</div>
@@ -33,7 +25,7 @@
 	<transition appear @enter="enter" @before-enter="beforeEnter" :css="false">
 		<div
 			v-if="showMenu"
-			class="navMenu w-full gap-4 fixed bg-secondary inset-0 h-full p-4 z-20"
+			class="navMenu w-full gap-4 fixed bg-primary inset-0 h-full p-4 z-20"
 		>
 			<ul class="flex flex-col items-center pt-36 h-full">
 				<li class="menu-link">
@@ -113,7 +105,7 @@ import linkedin from '@/assets/icons/linkedin.vue';
 import instagram from '@/assets/icons/instagram.vue';
 import gsap from 'gsap';
 import { onMounted } from 'vue';
-import { scrollControl } from '@/composibles/controls';
+import { scrollControl, topBarScroll } from '@/composibles/controls';
 
 const { enableScroll, disableScroll } = scrollControl();
 
@@ -154,17 +146,18 @@ const close = () => {
 	});
 };
 onMounted(() => {
-	gsap.fromTo(
-		'nav',
-		{ opacity: 0, y: -20 },
-		{
-			opacity: 1,
-			y: 0,
-			// duration: 0.35,
-			delay: 1.65,
-			ease: 'linear',
-		}
-	);
+	// gsap.fromTo(
+	// 	'nav',
+	// 	{ opacity: 0, y: -20 },
+	// 	{
+	// 		opacity: 1,
+	// 		y: 0,
+	// 		// duration: 0.35,
+	// 		delay: 1.65,
+	// 		ease: 'linear',
+	// 	}
+	// );
+	topBarScroll();
 });
 </script>
 
