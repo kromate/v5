@@ -2,7 +2,7 @@
 	<section id="experience">
 		<h2 class="numbered-heading chakra" data-num="02.">My Experience</h2>
 		<div class="relative mt-14">
-			<div class="absolute z-0 border-r border-orange ml-4 top-20  bottom-12 md:ml-8"></div>
+			<div class="absolute z-0 border-r border-orange ml-4 top-14  bottom-14 md:ml-8"></div>
 			<div class="relative z-10 flex flex-col gap-4">
 				<div class="flex items-center gap-2 md:gap-10" v-for="(experience, n) in experiences" :key="n">
 					<div class="card-circle">0{{n}}</div>
@@ -10,7 +10,7 @@
 						<div class="flex items-center gap-4 md:gap-10">
 							<div>
 								<div class="text-white opacity-90 font-medium md:text-xl">{{experience.title}} <span v-if="experience.link">( <a :href="experience.link.url" target="_blank" rel="noopener noreferrer" class="font-bold text-orange">{{experience.link.name}}</a> )</span></div>
-								<div class="mt-2 text-heather text-sm md:text-base">{{experience.desc}}</div>
+								<div class="mt-2 text-heather text-sm md:text-base" v-html="experience.desc"></div>
 							</div>
 						</div>
 					</div>
@@ -37,6 +37,12 @@ const experiences = ref([
 		title: "Andela Learning Community",
 		link: {name:'ALC', url:'https://andela.com/alc/'},
 		desc: "I was selected for the Andela Learning Community Schoolship in both mobile and web track which ran for a year (2019-2020)"
+	},
+	{
+		title: "Google Africa Developer sholarship",
+		link: {name:'GADS', url:'https://gads.andela.com/'},
+		desc: `Participated and qualified for the GADS 2019 program, it was during this program I deepened my frontend development skill and acquired new skills i.e backend development with node.
+Later went on to become a Mentor for the program the following year GADS 2020`
 	}
 ]);
 </script>
