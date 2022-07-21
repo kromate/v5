@@ -2,7 +2,12 @@
 	<section id="about">
 		<h2 class="numbered-heading chakra" data-num="01.">About Me</h2>
 
-		<div class="inner items-start justify-items-end"  data-aos="fade-in" data-aos-duration="3500" data-aos-easing="linear">
+		<div
+			class="inner items-start justify-items-end"
+			data-aos="fade-in"
+			data-aos-duration="3500"
+			data-aos-easing="linear"
+		>
 			<div class="styledText">
 				<div>
 					<p>
@@ -23,7 +28,7 @@
 					</p>
 				</div>
 
-				<p class="italic my-3 chakra">
+				<p class="italic my-3 chakra text-orange opacity-80">
 					Below are a list of my tools and languages
 				</p>
 				<ul class="flex gap-2.5 items-center mt-1.5 flex-wrap">

@@ -1,7 +1,7 @@
 <template>
-	<section id="works">
+	<section id="works" class="flex flex-col">
 		<h2 class="numbered-heading chakra" data-num="03.">my projects</h2>
-		<router-link to="/archive" class="text-orange"
+		<router-link to="/archive" class="text-orange -mt-3"
 			>View a full list of my projects</router-link
 		>
 		<transition-group
