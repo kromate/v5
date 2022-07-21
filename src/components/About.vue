@@ -2,7 +2,7 @@
 	<section id="about">
 		<h2 class="numbered-heading chakra" data-num="01.">About Me</h2>
 
-		<div class="inner items-start justify-items-end">
+		<div class="inner items-start justify-items-end"  data-aos="fade-in" data-aos-duration="3500" data-aos-easing="linear">
 			<div class="styledText">
 				<div>
 					<p>
