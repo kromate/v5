@@ -19,27 +19,31 @@ export const scrollControl = () => {
 
 export const scrollpsy = ()=> {
   const scrollspys = document.querySelectorAll("section");
-  const links = document.querySelector(".links") as HTMLDivElement
+  const links = document.querySelector(".links ") as HTMLDivElement
   const linksHeight = links?.offsetHeight;
-  // console.log(linksHeight);
-  const allLinks = links.querySelectorAll(".nav-link");
-  console.log(allLinks);
+  const allLinks = links.querySelectorAll(".nav-link>a");
+
   function scrollspy() {
     scrollspys.forEach(current => {
-      var _ = current;
+      let _ = current;
       let currentElementOffset = _.offsetTop;
       let scrollPosition =
         document.documentElement.scrollTop || document.body.scrollTop;
       if (currentElementOffset <= scrollPosition + linksHeight) {
         allLinks.forEach(currentLink => {
-          currentLink.classList.remove("active");
+          if (currentLink.classList.contains("!text-orange")) {
+              currentLink.classList.remove("!text-orange");
+          }
         });
         const currentID = current.getAttribute("id");
-        document
-          .querySelector(`a[href="#${currentID}"]`)
-          .classList.add("active");
+        if (currentID !== 'Hero') {
+           const currentLink =  document?.querySelector(`a[href="/#${currentID}"]`)
+             currentLink?.classList.add("!text-orange");
+        }
+     
       }
     });
   }
+
   window.addEventListener("scroll", scrollspy);
 }

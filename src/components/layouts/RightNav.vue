@@ -53,6 +53,7 @@ scrollpsy()
 <style scoped lang="scss">
 a {
 	writing-mode: vertical-rl;
+	transition: all 0.25s;
 }
 li {
 	display: block;
