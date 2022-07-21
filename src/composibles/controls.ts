@@ -49,14 +49,17 @@ export const scrollpsy = () => {
 };
 
 export const topBarScroll = () => {
-	let lastKnownScrollY = 0;
+	let lastKnownScrollY = 100;
 	let currentScrollY = 0;
 	let ticking = false;
 	let idOfHeader = 'header';
 	let eleHeader: HTMLElement;
+	// (document?.getElementById(idOfHeader) as HTMLElement).classList.add(
+	// 	'translate-y-0'
+	// );
 	const classes = {
-		pinned: 'translate-y-0',
-		unpinned: '-translate-y-20',
+		pinned: '!translate-y-0',
+		unpinned: '!-translate-y-20',
 	};
 	function onScroll() {
 		currentScrollY = window.pageYOffset;

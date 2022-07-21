@@ -157,6 +157,7 @@ onMounted(() => {
 	// 		ease: 'linear',
 	// 	}
 	// );
+
 	topBarScroll();
 });
 </script>
@@ -167,12 +168,13 @@ li {
 }
 .nav-icon {
 	transform: scale(1.5);
+	color: var(--orange);
 }
 .menu-link {
 	background: -webkit-linear-gradient(
 		-86deg,
-		#eef85b 5%,
-		#7aec8d 53%,
+		darkorange 5%,
+		#ccd6f6 53%,
 		#09e5c3 91%
 	);
 	text-transform: uppercase;
