@@ -120,7 +120,7 @@ section {
         counter-increment: section;
         content: attr(data-num);
         margin-right: 10px;
-        color: var(--purple);
+        color: var(--orange);
         font-size: clamp(26px, 7vw, var(--fz-xxl));
         font-weight: 400;
 

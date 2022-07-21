@@ -5,10 +5,10 @@ module.exports = {
 			colors: {
 				primary: 'var(--primary)',
 				secondary: 'var(--secondary)',
-				purple: 'var(--purple)',
+				purple: 'var(--orange)',
 				white: 'var(--white)',
 				badge: 'var(--badge)',
-				light_purple: 'var(--light_purple)',
+				light_purple: 'var(--light_orange)',
 			},
 		},
 	},
