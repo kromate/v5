@@ -3,7 +3,7 @@
 		<section>
 			<header>
 				<h1 class="font-bold text-6xl text-white mt-12">Archive</h1>
-				<p class="text-purple mt-2 tracking-wide">
+				<p class="text-orange mt-2 tracking-wide">
 					A big list of things I’ve worked on
 				</p>
 			</header>

@@ -78,14 +78,14 @@ section {
     }
 
     .big-btn {
-        @apply text-purple border border-purple py-3 px-10 rounded cursor-pointer relative text-base;
+        @apply text-orange border border-orange py-3 px-10 rounded cursor-pointer relative text-base;
         &:focus,
         &:active {
             background-color: #ffffff30;
             outline: none;
         }
         &:before {
-            @apply bg-light_purple;
+            @apply bg-light_orange;
             content: '';
             position: absolute;
             bottom: 0;
