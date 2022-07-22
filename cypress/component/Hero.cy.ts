@@ -1,4 +1,4 @@
-import Hero from '../../src/components/Hero.vue'
+import Hero from '@/components/Hero.vue'
 
 describe('ComponentName.cy.ts', () => {
   it('mounts', () => {
