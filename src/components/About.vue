@@ -20,11 +20,19 @@
 					<p>
 						Over the years, I have had the opportunity to work with amazing
 						companies and people, and on diverse projects.
-						<br />I recently started a YouTube channel which is focused on
-						documenting my Passion Projects (open source projects I work on) and
-						my journey in tech. <br />When I am not writing code, I am usually
-						binging an anime/TV series. <br />PS: I looove One Piece. It's all
-						you want in an anime (interesting and non-ending😂).
+						<br />I recently started a
+						<a
+							href="https://www.youtube.com/c/Kromate_24"
+							class="text-orange opacity-80"
+							target="_blank"
+							rel="noopener noreferrer"
+							>YouTube channel</a
+						>
+						which is focused on documenting my Passion Projects (open source
+						projects I work on) and my journey in tech. <br />When I am not
+						writing code, I am usually binging an anime/TV series. <br />PS: I
+						looove One Piece. It's all you want in an anime (interesting and
+						non-ending😂).
 					</p>
 				</div>
 
@@ -71,7 +79,7 @@ const skills = ref([
 	'Animations',
 	'APIs',
 	'plugins',
-	'extensions',
+	'chrome extensions',
 	'Testing (unit and E2E)',
 	'System Design',
 ]);
