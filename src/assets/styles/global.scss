@@ -28,6 +28,9 @@ section {
 }
 
 @layer utilities {
+    .trans {
+        @apply transition-all duration-300;
+    }
     .chakra {
         font-family: 'Chakra Petch', sans-serif;
     }

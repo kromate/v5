@@ -61,14 +61,28 @@ export const projects = ref([
         name: 'DSC Website',
         desc: 'I Contributed to the DSC Unilag website to decrease the load time and update the site for speed and efficiency',
         tags: ['HTML', 'Bootstrap', 'Jquery'],
-        links: [{ name: 'github', url: 'https://github.com/DSC-Unilag/dsc-unilag.github.io' }, { name: 'live', url: 'hhttps://dscunilag.dev/' },],
+        links: [{ name: 'github', url: 'https://github.com/DSC-Unilag/dsc-unilag.github.io' }, { name: 'live', url: 'https://dscunilag.dev/' },],
         show: true
     },
     {
-        name: 'FaceReg',
-        desc: 'A web based facial recognition system that can be used to take attendance of a class or group of people',
-        tags: ['Vue', 'Faceapi.js', 'Webcam.js'],
-        links: [{ name: 'live', url: 'https://fas.netlify.app/' },],
+        name: 'Studee',
+        desc: 'A open source project I built & designed under Kromtech as a sort of student community app with features like past question and co.',
+        tags: ['Vue', 'Ionic', 'firebase'],
+        links: [{ name: 'github', url: 'https://github.com/KROM-TECH/Studee' }, { name: 'live', url: 'https://studee.kromtech.io/' },],
+        show: true
+    },
+    {
+        name: 'Kromtech Academic Archive',
+        desc: 'This was another kromtech project I designed and built which acted as a General database for different academic materials (Books, Videos, Articles)',
+        tags: ['Vue', 'firebase', 'APIs'],
+        links: [{ name: 'github', url: 'https://github.com/KROM-TECH/KAA_VUE' }, { name: 'live', url: 'https://kaa.kromtech.io/' },],
+        show: true
+    },
+    {
+        name: 'SVG Charactar builder',
+        desc: 'This was my attempt to make a character builder with SVGs and Javascript',
+        tags: ['SVG', 'Vue', 'vue-router'],
+        links: [{ name: 'github', url: 'https://github.com/kromate/SVG_SHAPE_BUILDER' }, { name: 'live', url: 'https://svgshapes.netlify.app/' },],
         show: true
     },
 ])

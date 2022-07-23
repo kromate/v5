@@ -16,7 +16,7 @@
 				:key="project"
 				:data-index="index"
 			>
-				<div class="card bg-badge rounded-sm border-">
+				<div class="card bg-badge rounded-sm hover:-translate-y-0.5 hover:scale-105 trans">
 					<header class="w-full">
 						<div class="flex items-center justify-between w-full">
 							<folder class="text-3xl text-orange" />
