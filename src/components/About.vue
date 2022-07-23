@@ -23,7 +23,7 @@
 						<br />I recently started a
 						<a
 							href="https://www.youtube.com/c/Kromate_24"
-							class="text-orange opacity-80"
+							class="text-orange"
 							target="_blank"
 							rel="noopener noreferrer"
 							>YouTube channel</a
@@ -36,7 +36,7 @@
 					</p>
 				</div>
 
-				<p class="italic my-3 chakra text-orange opacity-80">
+				<p class="italic my-3 chakra text-orange ">
 					Below are a list of my tools and languages
 				</p>
 				<ul class="flex gap-2.5 items-center mt-1.5 flex-wrap">

@@ -8,7 +8,7 @@
 			<div class="relative z-10 flex flex-col gap-4">
 				<div
 					class="flex items-center gap-2 md:gap-10"
-					v-for="(experience, n) in experiencesArray"
+					v-for="(experience, n) in experiences"
 					:key="n"
 				>
 					<div class="card-circle">0{{ n }}</div>
@@ -43,7 +43,7 @@
 </template>
 
 <script setup lang="ts">
-import { experiencesArray } from '@/composibles/experience';
+import { experiences } from '@/composibles/experiences';
 
 </script>
 

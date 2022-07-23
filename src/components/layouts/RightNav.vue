@@ -11,7 +11,7 @@
 				<a href="/#experience">Experience</a>
 			</li>
 			<li class="nav-link">
-				<a href="/#works">Works</a>
+				<a href="/#works">Work</a>
 			</li>
 			<li class="nav-link">
 				<a href="/#contact">Contact</a>
