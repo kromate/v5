@@ -19,10 +19,11 @@
 				<div class="card bg-badge rounded-sm border-">
 					<header class="w-full">
 						<div class="flex items-center justify-between w-full">
-							<folder class="text-4xl text-orange" />
-							<div class="flex items-center">
-								<a href="http://" target="_blank" rel="noopener noreferrer">
-									<redirect class="text-sm text-secondary" />
+							<folder class="text-3xl text-orange" />
+							<div class="flex items-center gap-3.5">
+								<a :href="link.url" class="!text-xs text-secondary hover:text-orange transition-all duration-300" target="_blank" rel="noopener noreferrer" v-for="link in project.links" :key="link">
+									<redirect  v-if="link.name === 'live'" class="w-6 h-6"/>
+									<github  v-if="link.name === 'github'" class="w-5 h-5"/>
 								</a>
 							</div>
 						</div>
@@ -40,15 +41,14 @@
 				</div>
 			</li>
 		</transition-group>
-		<!-- <router-link to="/archive" class="big-btn mt-5"
-			>View Project Archive</router-link
-		> -->
+	
 	</section>
 </template>
 
 <script setup lang="ts">
 import folder from '@/assets/icons/folder.vue';
 import redirect from '@/assets/icons/redirect.vue';
+import github from '@/assets/icons/github.vue';
 import { gsap } from 'gsap';
 import { projects } from '@/composibles/projects';
 
