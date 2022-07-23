@@ -11,7 +11,8 @@
 			@enter="enter"
 			tag="ul"
 		>
-			<li v-for="n in 5" :key="n">
+			<li v-for="(project, index) in 5" :key="project" 
+					:data-index="index">
 				<div class="card bg-badge rounded-sm border-">
 					<header class="w-full">
 						<div class="flex items-center justify-between w-full">
