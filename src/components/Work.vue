@@ -11,29 +11,31 @@
 			@enter="enter"
 			tag="ul"
 		>
-			<li v-for="(project, index) in 5" :key="project" 
-					:data-index="index">
+			<li
+				v-for="(project, index) in projects"
+				:key="project"
+				:data-index="index"
+			>
 				<div class="card bg-badge rounded-sm border-">
 					<header class="w-full">
 						<div class="flex items-center justify-between w-full">
 							<folder class="text-4xl text-orange" />
 							<div class="flex items-center">
-								<redirect class="text-sm text-secondary" />
+								<a href="http://" target="_blank" rel="noopener noreferrer">
+									<redirect class="text-sm text-secondary" />
+								</a>
 							</div>
 						</div>
 
 						<h2 class="text-white font-semibold text-2xl mt-5 mb-2">
-							Stranerd
+							{{project.name}}
 						</h2>
 						<p class="text-secondary">
-							Worked on a variety of projects from the landing page to the main
-							application, were i worked with other developers to deliver timely
-							updates and bug fixes when neccessary and meeting both business
-							and custom demands on time
+							{{project.desc}}
 						</p>
 					</header>
 					<footer class="flex gap-2 mt-5 flex-wrap">
-						<span class="pill !py-1" v-for="n in 5" :key="n">firebase</span>
+						<span class="pill !py-1" v-for="tag in project.tags" :key="tag">{{tag}}</span>
 					</footer>
 				</div>
 			</li>
@@ -48,6 +50,7 @@
 import folder from '@/assets/icons/folder.vue';
 import redirect from '@/assets/icons/redirect.vue';
 import { gsap } from 'gsap';
+import { projects } from '@/composibles/projects';
 
 const beforeEnter = (el: any) => {
 	el.style.opacity = '0';
