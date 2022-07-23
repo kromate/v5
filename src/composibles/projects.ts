@@ -9,6 +9,13 @@ export const projects = ref([
         show: true
     },
     {
+        name: 'Wirepay',
+        desc: 'I worked on the company`s website and user dashboard',
+        tags: ['Nuxt', 'tailwind', 'typescript'],
+        links: [{ name: 'live', url: 'https://dashboard.maplerad.com/' }],
+        show: true
+    },
+    {
         name: 'Stranerd',
         desc: 'Building various tools to enable students to collaborate, innovate and achieve academic success.',
         tags: ['Vue', 'tailwind', 'Ionic'],
@@ -42,5 +49,26 @@ export const projects = ref([
         tags: ['Vue', 'Firebase', 'Cloud Storage'],
         links: [{ name: 'live', url: 'https://fazzyd.com/' },],
         show: true
-    }
+    },
+    {
+        name: 'FaceReg',
+        desc: 'A web based facial recognition system that can be used to take attendance of a class or group of people',
+        tags: ['Vue', 'Faceapi.js', 'Webcam.js'],
+        links: [{ name: 'github', url: 'https://github.com/kromate/faceReg' }, { name: 'live', url: 'https://fas.netlify.app/' },],
+        show: true
+    },
+    {
+        name: 'DSC Website',
+        desc: 'I Contributed to the DSC Unilag website to decrease the load time and update the site for speed and efficiency',
+        tags: ['HTML', 'Bootstrap', 'Jquery'],
+        links: [{ name: 'github', url: 'https://github.com/DSC-Unilag/dsc-unilag.github.io' }, { name: 'live', url: 'hhttps://dscunilag.dev/' },],
+        show: true
+    },
+    {
+        name: 'FaceReg',
+        desc: 'A web based facial recognition system that can be used to take attendance of a class or group of people',
+        tags: ['Vue', 'Faceapi.js', 'Webcam.js'],
+        links: [{ name: 'live', url: 'https://fas.netlify.app/' },],
+        show: true
+    },
 ])
