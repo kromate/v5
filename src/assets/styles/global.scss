@@ -36,7 +36,7 @@ section {
     }
 
     .nav-icon {
-        @apply h-5  transition-all duration-300 cursor-pointer hover:text-white;
+        @apply h-5  transition-all duration-300 cursor-pointer hover:text-orange;
         &:hover {
             transform: scale(1.25) !important;
         }
@@ -55,7 +55,7 @@ section {
         @apply md:hidden flex;
     }
     .nav-link {
-        @apply transition-all duration-300 cursor-pointer hover:text-white;
+        @apply transition-all duration-300 cursor-pointer hover:text-orange;
         &:hover {
             transform: scale(1.1) !important;
         }
