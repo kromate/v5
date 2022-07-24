@@ -180,7 +180,9 @@ export const showMore = () => {
     showMoreValue.value = false
 }
 export const showLess = () => {
-    INITIAL_LENGTH.value -= (projectsArr.length - INITIAL_LENGTH.value)
+    console.log(INITIAL_LENGTH);
+    INITIAL_LENGTH.value -= (projectsArr.length - 6)
+    console.log(INITIAL_LENGTH, 'gg');
     showMoreValue.value = true
 }
 

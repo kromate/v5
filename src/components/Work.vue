@@ -42,7 +42,10 @@
 			</li>
 		</transition-group>
 		<button v-if="showMoreValue"  class="big-btn mt-20 w-auto mx-auto" @click="showMore"
-			>See More</button
+			>Show More</button
+		>
+		<button v-else  class="big-btn mt-20 w-auto mx-auto" @click="showLess"
+			>Show less</button
 		>
 	</section>
 </template>
@@ -52,7 +55,7 @@ import folder from '@/assets/icons/folder.vue';
 import redirect from '@/assets/icons/redirect.vue';
 import github from '@/assets/icons/github.vue';
 import { gsap } from 'gsap';
-import { projects, showMore, showMoreValue } from '@/composibles/projects';
+import { projects, showMore, showMoreValue, showLess } from '@/composibles/projects';
 
 const beforeEnter = (el: any) => {
 	el.style.opacity = '0';
