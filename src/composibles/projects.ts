@@ -1,6 +1,39 @@
 import { ref } from 'vue';
 
-export const projects = ref([
+const INITIAL_LENGTH = 6
+interface IProject {
+    name: string,
+    desc: string,
+    tags: string[],
+    links: { name: string; url: string; }[],
+    show: Boolean
+}
+
+function splitArrayIntoChunksOfLen(arr: Array<IProject>, len: number) {
+    var chunks = [], i = 0, n = arr.length;
+    while (i < n) {
+        chunks.push(arr.slice(i, i += len));
+    }
+    return chunks;
+}
+
+
+export const projects: Array<IProject> = [
+
+    {
+        name: 'Script Runner',
+        desc: 'A chrome extension in which you can save Javascript code in the browser and run them later in the console',
+        tags: ['Chrome extension', 'Javascript'],
+        links: [{ name: 'github', url: 'https://github.com/kromate/chrome-extensions/tree/main/Script%20Runner' },],
+        show: true
+    },
+    {
+        name: 'Code Formatter',
+        desc: 'A chrome extension that helps you format your HTML & CSS code using prettier',
+        tags: ['Chrome extension', 'Javascript'],
+        links: [{ name: 'github', url: 'https://github.com/kromate/chrome-extensions/tree/main/Format%20Code' }, { name: 'live', url: 'https://chrome.google.com/webstore/detail/code-formatter/pbcmhfjddijdnkbfcbghfnoejdknfejd' },],
+        show: true
+    },
     {
         name: 'Vue3 Animation',
         desc: 'A collection of vue 3 animations made with different libraries from GSAP to hover effects and just plain CSS animations',
@@ -86,6 +119,13 @@ export const projects = ref([
         show: true
     },
     {
+        name: 'intercom clone',
+        desc: 'An intercom clone that uses google spreadsheet to collect users feedback',
+        tags: ['Typescript', 'Tailwind', 'library'],
+        links: [{ name: 'github', url: 'https://github.com/kromate/careButton' }, { name: 'live', url: 'https://kromate.github.io/careButton/' },],
+        show: true
+    },
+    {
         name: 'Fazzy D',
         desc: 'I Designed & Built a fashion E-commerce store for a client with features like "add to favorite", "admin Dashboard", "payment gateways" e.t.c',
         tags: ['Vue', 'Firebase', 'Cloud Storage'],
@@ -127,4 +167,7 @@ export const projects = ref([
         links: [{ name: 'github', url: 'https://github.com/kromate/SVG_SHAPE_BUILDER' }, { name: 'live', url: 'https://svgshapes.netlify.app/' },],
         show: true
     },
-])
+]
+
+
+export const chunkedProject = splitArrayIntoChunksOfLen(projects, INITIAL_LENGTH)

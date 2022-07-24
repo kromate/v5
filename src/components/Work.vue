@@ -1,9 +1,9 @@
 <template>
 	<section id="works" class="flex flex-col">
 		<h2 class="numbered-heading chakra" data-num="03.">my projects</h2>
-		<router-link to="/archive" class="text-orange -mt-3"
+		<!-- <router-link to="/archive" class="text-orange -mt-3"
 			>View a full list of my projects</router-link
-		>
+		> -->
 		<transition-group
 			appear
 			class="grid grid-cols-3"
@@ -12,7 +12,7 @@
 			tag="ul"
 		>
 			<li
-				v-for="(project, index) in projects"
+				v-for="(project, index) in projects[0]"
 				:key="project"
 				:data-index="index"
 			>
@@ -41,7 +41,9 @@
 				</div>
 			</li>
 		</transition-group>
-	
+		<button  class="big-btn mt-20 w-auto mx-auto"
+			>See More</button
+		>
 	</section>
 </template>
 
@@ -50,7 +52,7 @@ import folder from '@/assets/icons/folder.vue';
 import redirect from '@/assets/icons/redirect.vue';
 import github from '@/assets/icons/github.vue';
 import { gsap } from 'gsap';
-import { projects } from '@/composibles/projects';
+import { chunkedProject as projects } from '@/composibles/projects';
 
 const beforeEnter = (el: any) => {
 	el.style.opacity = '0';
