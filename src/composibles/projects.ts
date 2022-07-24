@@ -2,10 +2,52 @@ import { ref } from 'vue';
 
 export const projects = ref([
     {
+        name: 'Vue3 Animation',
+        desc: 'A collection of vue 3 animations made with different libraries from GSAP to hover effects and just plain CSS animations',
+        tags: ['Vue', 'GSAP', 'Tailwind'],
+        links: [{ name: 'github', url: 'https://github.com/kromate/vue3-gsap-animations' }, { name: 'live', url: 'https://vue3-animations.netlify.app/' },],
+        show: true
+    },
+    {
+        name: 'LegalPreneur',
+        desc: 'The official website for Legalpreneur Attorneys & Consulting firm',
+        tags: ['Vue', 'Vue-draggable', 'Tailwind'],
+        links: [{ name: 'live', url: 'https://legalpreneurconsulting.com/' },],
+        show: true
+    },
+    {
+        name: 'Vue3 dashboard',
+        desc: 'I saw a very beautiful dashboard template in Vanilla Js and decided to recreate it in Vue',
+        tags: ['Vue', 'Tailwind', 'Chart.js'],
+        links: [{ name: 'github', url: 'https://github.com/kromate/vue3-vite-tailwind-dashboard' }, { name: 'live', url: 'https://vite-dashboard.netlify.app/' },],
+        show: true
+    },
+    {
+        name: 'Codeden',
+        desc: 'This is a drag n drop vue component builder with other feature like a component library and co',
+        tags: ['Vue', 'Vue-draggable', 'Tailwind'],
+        links: [{ name: 'github', url: 'https://github.com/kromate/Codeden' }, { name: 'live', url: 'https://codeden.netlify.app/' },],
+        show: true
+    },
+    {
+        name: 'Timelinx',
+        desc: 'I was bored and decided to implement a design from my friend',
+        tags: ['Nuxt', 'Tailwind', 'Firebase'],
+        links: [{ name: 'github', url: 'https://github.com/kromate/Timeline-Creator' }, { name: 'live', url: 'https://timelinx.netlify.app/' },],
+        show: true
+    },
+    {
+        name: 'Octobus',
+        desc: 'A web app in which users can get updates on buses and their schedules',
+        tags: ['Google Maps', 'Firebase', 'Node.Js'],
+        links: [{ name: 'github', url: 'https://github.com/kromate/Octobus' }, { name: 'live', url: 'https://octobus.netlify.app/' },],
+        show: true
+    },
+    {
         name: 'Gamexit',
         desc: 'A platform focused on connecting people using web based games. Create a 1v1 or tournament challenge and invite your friends ',
         tags: ['Websocket', 'WebRTC', 'Node.Js'],
-        links: [{ name: 'github', url: 'https://github.com/kromate/gamexit' }, { name: 'live', url: 'hhttps://gamexit.netlify.app/' },],
+        links: [{ name: 'github', url: 'https://github.com/kromate/gamexit' }, { name: 'live', url: 'https://gamexit.netlify.app/' },],
         show: true
     },
     {
