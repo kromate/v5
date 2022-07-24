@@ -9,17 +9,17 @@ export const projects = ref([
         show: true
     },
     {
-        name: 'LegalPreneur',
-        desc: 'The official website for Legalpreneur Attorneys & Consulting firm',
-        tags: ['Vue', 'Vue-draggable', 'Tailwind'],
-        links: [{ name: 'live', url: 'https://legalpreneurconsulting.com/' },],
-        show: true
-    },
-    {
         name: 'Vue3 dashboard',
         desc: 'I saw a very beautiful dashboard template in Vanilla Js and decided to recreate it in Vue',
         tags: ['Vue', 'Tailwind', 'Chart.js'],
         links: [{ name: 'github', url: 'https://github.com/kromate/vue3-vite-tailwind-dashboard' }, { name: 'live', url: 'https://vite-dashboard.netlify.app/' },],
+        show: true
+    },
+    {
+        name: 'LegalPreneur',
+        desc: 'The official website for Legalpreneur Attorneys & Consulting firm',
+        tags: ['Vue', 'Vue-draggable', 'Tailwind'],
+        links: [{ name: 'live', url: 'https://legalpreneurconsulting.com/' },],
         show: true
     },
     {
