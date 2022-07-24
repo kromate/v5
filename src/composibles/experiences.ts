@@ -15,7 +15,7 @@ export const experiences = ref([
 		desc: `I Participated in the Andela Learning Community devC program in which I learnt to improve my web development skills and work in a team.`,
 	},
 	{
-		title: 'Google Africa Developer sholarship',
+		title: 'Google Africa Developer scholarship',
 		link: { name: 'GADS', url: 'https://gads.andela.com/' },
 		desc: `I qualified for the GADS 2019 program, it was during this program I deepened my frontend development skill and acquired new skills i.e backend development with node.
 Later went on to become a Mentor for the program the following year GADS 2020`,
