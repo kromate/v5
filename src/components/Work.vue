@@ -12,7 +12,7 @@
 			tag="ul"
 		>
 			<li
-				v-for="(project, index) in projects[0]"
+				v-for="(project, index) in projects"
 				:key="project"
 				:data-index="index"
 			>
@@ -41,7 +41,7 @@
 				</div>
 			</li>
 		</transition-group>
-		<button  class="big-btn mt-20 w-auto mx-auto"
+		<button v-if="showMoreValue"  class="big-btn mt-20 w-auto mx-auto" @click="showMore"
 			>See More</button
 		>
 	</section>
@@ -52,7 +52,7 @@ import folder from '@/assets/icons/folder.vue';
 import redirect from '@/assets/icons/redirect.vue';
 import github from '@/assets/icons/github.vue';
 import { gsap } from 'gsap';
-import { chunkedProject as projects } from '@/composibles/projects';
+import { projects, showMore, showMoreValue } from '@/composibles/projects';
 
 const beforeEnter = (el: any) => {
 	el.style.opacity = '0';
@@ -62,7 +62,7 @@ const enter = (el: any, done: () => void) => {
 	gsap.to(el, {
 		opacity: 1,
 		y: 0,
-		duration: 0.5,
+		duration: 0.35,
 		onComplete: done,
 		delay: parseInt(el.dataset.index as string) * 0.1,
 	});

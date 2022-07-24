@@ -1,6 +1,7 @@
-import { ref } from 'vue';
+import { computed, ref } from '@vue/reactivity';
 
-const INITIAL_LENGTH = 6
+const INITIAL_LENGTH = ref(6)
+export const showMoreValue = ref(true)
 interface IProject {
     name: string,
     desc: string,
@@ -9,16 +10,16 @@ interface IProject {
     show: Boolean
 }
 
-function splitArrayIntoChunksOfLen(arr: Array<IProject>, len: number) {
-    var chunks = [], i = 0, n = arr.length;
-    while (i < n) {
-        chunks.push(arr.slice(i, i += len));
-    }
-    return chunks;
-}
+// function splitArrayIntoChunksOfLen(arr: Array<IProject>, len: number) {
+//     var chunks = [], i = 0, n = arr.length;
+//     while (i < n) {
+//         chunks.push(arr.slice(i, i += len));
+//     }
+//     return chunks;
+// }
 
 
-export const projects: Array<IProject> = [
+export const projectsArr: Array<IProject> = [
 
     {
         name: 'Script Runner',
@@ -169,5 +170,17 @@ export const projects: Array<IProject> = [
     },
 ]
 
+export const projects = computed(() => {
+    return projectsArr.slice(0, INITIAL_LENGTH.value)
+})
 
-export const chunkedProject = splitArrayIntoChunksOfLen(projects, INITIAL_LENGTH)
+
+export const showMore = () => {
+    INITIAL_LENGTH.value += (projectsArr.length - INITIAL_LENGTH.value)
+    showMoreValue.value = false
+}
+export const showLess = () => {
+    INITIAL_LENGTH.value -= (projectsArr.length - INITIAL_LENGTH.value)
+    showMoreValue.value = true
+}
+
