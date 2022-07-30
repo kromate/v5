@@ -1,20 +1,17 @@
-import { createRouter, createWebHistory } from 'vue-router'
-// @ts-ignore
-import routes from '~pages'
+import { routes } from '@/router/routes';
+import { createRouter, createWebHistory } from 'vue-router';
 
-const router = createRouter({
-	history: createWebHistory(),
-	routes: [
-		...routes,
-		{
-			path: '/:catchAll(.*)',
-			component: () => import('../views/404.vue'),
-		},
-	],
-})
+export const setupRouter = async () => {
+	const router = createRouter({
+		history: createWebHistory(),
+		routes: await Promise.all(routes),
+	});
 
-// router.afterEach(() => {
-// 	window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-// })
+	router.afterEach(() => {
+		window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+	});
 
-export { router }
+	return router;
+};
+
+export const router = setupRouter();
