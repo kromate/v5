@@ -182,6 +182,16 @@ export const projectsArr: Array<IProject> = [
 		show: true,
 	},
 	{
+		name: 'intercom clone plugin',
+		desc: 'I converted the intercom clone to a vue plugin that can be used in any project',
+		tags: ['Typescript', 'NPM Package'],
+		links: [
+			{ name: 'github', url: 'https://github.com/kromate/careButton' },
+			{ name: 'live', url: 'https://kromate.github.io/careButton/' },
+		],
+		show: true,
+	},
+	{
 		name: 'Fazzy D',
 		desc: 'I Designed & Built a fashion E-commerce store for a client with features like "add to favorite", "admin Dashboard", "payment gateways" e.t.c',
 		tags: ['Vue', 'Firebase', 'Cloud Storage'],
