@@ -2,9 +2,16 @@ import { routes } from '@/router/routes';
 import { createRouter, createWebHistory } from 'vue-router';
 
 export const setupRouter = async () => {
+	let routesArr = await Promise.all(routes);
 	const router = createRouter({
 		history: createWebHistory(),
-		routes: await Promise.all(routes),
+		routes: [
+		...routesArr,
+		{
+			path: '/:catchAll(.*)',
+			component: () => import('../views/404.vue'),
+		},
+	],
 	});
 
 	router.afterEach(() => {
