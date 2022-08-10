@@ -77,6 +77,19 @@ export const projectsArr: Array<IProject> = [
 		show: true,
 	},
 	{
+		name: 'Tailwind-to-css',
+		desc: 'An NPM package that converts Tailwind CSS to vanilla CSS',
+		tags: ['Javascript', 'Tailwind', 'NPM Package'],
+		links: [
+			{
+				name: 'github',
+				url: 'https://github.com/kromate/tailwind-to-css',
+			},
+			{ name: 'live', url: 'https://www.npmjs.com/package/tailwind-to-css' },
+		],
+		show: true,
+	},
+	{
 		name: 'Tailwind-Inliner',
 		desc: 'This is a web app that allows you to convert your tailwind classes to inline css, especially useful for emails',
 		tags: ['Vue', 'Tailwind', 'Monaco Editor'],
