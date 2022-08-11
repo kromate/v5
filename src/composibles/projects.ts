@@ -76,6 +76,13 @@ export const projectsArr: Array<IProject> = [
 		],
 		show: true,
 	},
+		{
+		name: 'Maplerad Dashboard',
+		desc: 'The customer Dashboard application for Maplerad',
+		tags: ['Nuxt', 'tailwind', 'typescript'],
+		links: [{ name: 'live', url: 'https://app.maplerad.com/' }],
+		show: true,
+	},
 	{
 		name: 'Tailwind-to-css',
 		desc: 'An NPM package that converts Tailwind CSS to vanilla CSS',
