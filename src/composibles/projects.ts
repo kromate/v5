@@ -20,10 +20,10 @@ interface IProject {
 
 export const projectsArr: Array<IProject> = [
 	{
-		name: 'Wirepay',
-		desc: 'I worked on the company`s website and user dashboard',
+		name: 'Maplerad',
+		desc: 'I worked on all things frontend related at Maplerad. Maplerad allows you to embed banking services into your application.',
 		tags: ['Nuxt', 'tailwind', 'typescript'],
-		links: [{ name: 'live', url: 'https://dashboard.maplerad.com/' }],
+		links: [{ name: 'live', url: 'https://maplerad.com/' }],
 		show: true,
 	},
 	{
