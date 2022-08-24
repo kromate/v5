@@ -21,6 +21,13 @@
 				<twitter class="nav-icon" />
 			</a>
 			<a
+				href="https://api.whatsapp.com/send?phone=2348146923944"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<whatsapp class="nav-icon " />
+			</a>
+			<a
 				href="https://www.instagram.com/kromate_24/"
 				target="_blank"
 				rel="noopener noreferrer"
@@ -52,6 +59,7 @@ import twitter from '@/assets/icons/twitter.vue';
 import youtube from '@/assets/icons/youtube.vue';
 import linkedin from '@/assets/icons/linkedin.vue';
 import instagram from '@/assets/icons/instagram.vue';
+import whatsapp from '@/assets/icons/whatsapp.vue';
 import gsap from 'gsap';
 import { onMounted } from 'vue';
 

@@ -41,7 +41,7 @@
 					<a href="/#contact" class="chakra" @click="close">Contact</a>
 				</li>
 				<span class="menu-link">
-					<li class="mt-20 gap-12 items-center flex">
+					<li class="mt-20 gap-6 items-center flex">
 						<span>
 							<a
 								href="https://github.com/kromate"
@@ -88,6 +88,15 @@
 								<linkedin class="nav-icon" />
 							</a>
 						</span>
+						<span>
+							<a
+				href="https://api.whatsapp.com/send?phone=2348146923944"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<whatsapp class="nav-icon " />
+			</a>
+						</span>
 					</li>
 				</span>
 			</ul>
@@ -103,6 +112,7 @@ import twitter from '@/assets/icons/twitter.vue';
 import youtube from '@/assets/icons/youtube.vue';
 import linkedin from '@/assets/icons/linkedin.vue';
 import instagram from '@/assets/icons/instagram.vue';
+import whatsapp from '@/assets/icons/whatsapp.vue';
 import gsap from 'gsap';
 import { onMounted } from 'vue';
 import { scrollControl, topBarScroll } from '@/composibles/controls';
