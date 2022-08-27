@@ -1,16 +1,16 @@
 <template>
 	<section id="works" class="flex flex-col">
 		<h2 class="numbered-heading chakra" data-num="03.">my projects</h2>
-		<!-- <router-link to="/archive" class="text-orange -mt-3"
-			>View a full list of my projects</router-link
-		> -->
+		<p to="/archive" class=" -mt-3">
+			There are about <span class="text-orange text-xl font-bold">{{projectsArr.length}}</span>  projects listed here and counting 👍🏾
+		</p>
 		<transition-group
 			appear
 			class="grid grid-cols-3"
 			@before-enter="beforeEnter"
 			@enter="enter"
 			tag="ul"
-		>
+		> 
 			<li
 				v-for="(project, index) in projects"
 				:key="project"
@@ -55,7 +55,7 @@ import folder from '@/assets/icons/folder.vue';
 import redirect from '@/assets/icons/redirect.vue';
 import github from '@/assets/icons/github.vue';
 import { gsap } from 'gsap';
-import { projects, showMore, showMoreValue, showLess } from '@/composibles/projects';
+import { projects, showMore, showMoreValue, showLess, projectsArr } from '@/composibles/projects';
 
 const beforeEnter = (el: any) => {
 	el.style.opacity = '0';
