@@ -84,6 +84,19 @@ export const projectsArr: Array<IProject> = [
 		show: true,
 	},
 	{
+		name: 'ScriptCentral',
+		desc: 'This is basically a web interface for open source project RottenScript with other features like search, share, edit and maybe even run (coming soon.)',
+		tags: ['Nuxt', 'Tailwind', 'Firebase'],
+		links: [
+			{
+				name: 'github',
+				url: 'https://github.com/kromate/tailwind-to-css',
+			},
+			{ name: 'live', url: 'https://www.npmjs.com/package/tailwind-to-css' },
+		],
+		show: true,
+	},
+	{
 		name: 'Tailwind-to-css',
 		desc: 'An NPM package that converts Tailwind CSS to vanilla CSS',
 		tags: ['Javascript', 'Tailwind', 'NPM Package'],
