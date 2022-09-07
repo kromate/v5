@@ -83,6 +83,13 @@ export const projectsArr: Array<IProject> = [
 		links: [{ name: 'live', url: 'https://app.maplerad.com/' }],
 		show: true,
 	},
+		{
+		name: 'Maplerad Dashboard',
+		desc: 'The customer Dashboard application for Maplerad',
+		tags: ['Nuxt', 'tailwind', 'typescript'],
+		links: [{ name: 'live', url: 'https://app.maplerad.com/' }],
+		show: true,
+	},
 	{
 		name: 'ScriptCentral',
 		desc: 'This is basically a web interface for open source project RottenScript with other features like search, share, edit and maybe even run (coming soon.)',
