@@ -76,18 +76,18 @@ export const projectsArr: Array<IProject> = [
 		],
 		show: true,
 	},
-		{
+	{
 		name: 'Maplerad Dashboard',
 		desc: 'The customer Dashboard application for Maplerad',
 		tags: ['Nuxt', 'tailwind', 'typescript'],
 		links: [{ name: 'live', url: 'https://app.maplerad.com/' }],
 		show: true,
 	},
-		{
-		name: 'Maplerad Dashboard',
-		desc: 'The customer Dashboard application for Maplerad',
+	{
+		name: 'Wirepay',
+		desc: 'The Landing page for wirepay which is a product of Maplerad',
 		tags: ['Nuxt', 'tailwind', 'typescript'],
-		links: [{ name: 'live', url: 'https://app.maplerad.com/' }],
+		links: [{ name: 'live', url: 'https://sendwirepay.com/' }],
 		show: true,
 	},
 	{
