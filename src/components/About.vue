@@ -39,7 +39,7 @@
 				<p class="italic my-3 chakra text-orange ">
 					Below are a list of my tools and languages
 				</p>
-				<ul class="flex  items-center gap-2.5 mt-1.5 flex-wrap">
+				<ul classw="flex  items-center gap-2.5 mt-1.5 flex-wrap">
 					<li v-for="skill in skills" :key="skill" class="pill ">{{ skill }}</li>
 				</ul>
 			</div>
