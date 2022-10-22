@@ -7,7 +7,7 @@ export const experiences = ref([
 	},
 	{
 		title: 'B.sc in Computer Engineering',
-		desc: 'I underwent a B.Sc program in computer Engineering in the university of lagos.',
+		desc: 'I underwent a B.Sc program in Computer Engineering in the University of Lagos.',
 	},
 	{
 		title: 'Andela devC training',
@@ -22,7 +22,7 @@ Later went on to become a Mentor for the program the following year GADS 2020`,
 	},
 	{
 		title: 'Hackacthons',
-		desc: `I Participated in various Hackacthons ranging from government hosted like
+		desc: `I participated in various Hackacthons ranging from government hosted like
               <a href="https://cchubnigeria.com/datahackathon/"  target="_blank" rel="noopener"
                 ><i>D4G</i></a
               >
