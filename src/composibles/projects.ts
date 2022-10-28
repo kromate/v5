@@ -72,7 +72,7 @@ export const projectsArr: Array<IProject> = [
 				name: 'github',
 				url: 'https://github.com/kromate/vue3-gsap-animations',
 			},
-			{ name: 'live', url: 'https://vue3-animations.netlify.app/' },
+			{ name: 'live', url: 'https://animations.kromate.dev/' },
 		],
 		show: true,
 	},
@@ -82,7 +82,7 @@ export const projectsArr: Array<IProject> = [
 		tags: ['Websocket', 'WebRTC', 'Node.Js'],
 		links: [
 			{ name: 'github', url: 'https://github.com/kromate/gamexit' },
-			{ name: 'live', url: 'https://gamexit.netlify.app/' },
+			{ name: 'live', url: 'https://game.kromate.dev/' },
 		],
 		show: true,
 	},
@@ -107,9 +107,9 @@ export const projectsArr: Array<IProject> = [
 		links: [
 			{
 				name: 'github',
-				url: 'https://github.com/kromate/tailwind-to-css',
+				url: 'https://github.com/kromate/scriptCenter',
 			},
-			{ name: 'live', url: 'https://www.npmjs.com/package/tailwind-to-css' },
+			{ name: 'live', url: 'https://scripts.kromate.dev/' },
 		],
 		show: true,
 	},
@@ -132,7 +132,7 @@ export const projectsArr: Array<IProject> = [
 		tags: ['Vue', 'Tailwind', 'Monaco Editor'],
 		links: [
 			{ name: 'github', url: 'https://github.com/kromate/tailwind-inliner' },
-			{ name: 'live', url: 'https://twinliner.netlify.app/' },
+			{ name: 'live', url: 'https://inliner.kromate.dev/' },
 		],
 		show: true,
 	},
