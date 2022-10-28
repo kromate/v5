@@ -41,12 +41,12 @@ export const projectsArr: Array<IProject> = [
 		show: true,
 	},
 	{
-		name: 'Gamexit',
-		desc: 'A platform focused on connecting people using web based games. Create a 1v1 or tournament challenge and invite your friends ',
-		tags: ['Websocket', 'WebRTC', 'Node.Js'],
+		name: 'Kanban',
+		desc: 'An opensource kanban board built with Nuxt 3 and Tailwind',
+		tags: ['Nuxt 3', 'Tailwindcss', 'vuedraggble'],
 		links: [
 			{ name: 'github', url: 'https://github.com/kromate/gamexit' },
-			{ name: 'live', url: 'https://gamexit.netlify.app/' },
+			{ name: 'live', url: 'https://kanban.kromate.dev/' },
 		],
 		show: true,
 	},
@@ -73,6 +73,16 @@ export const projectsArr: Array<IProject> = [
 				url: 'https://github.com/kromate/vue3-gsap-animations',
 			},
 			{ name: 'live', url: 'https://vue3-animations.netlify.app/' },
+		],
+		show: true,
+	},
+		{
+		name: 'Gamexit',
+		desc: 'A platform focused on connecting people using web based games. Create a 1v1 or tournament challenge and invite your friends ',
+		tags: ['Websocket', 'WebRTC', 'Node.Js'],
+		links: [
+			{ name: 'github', url: 'https://github.com/kromate/gamexit' },
+			{ name: 'live', url: 'https://gamexit.netlify.app/' },
 		],
 		show: true,
 	},
