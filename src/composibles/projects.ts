@@ -142,7 +142,7 @@ export const projectsArr: Array<IProject> = [
 		tags: ['Vue', 'Vue-draggable', 'Tailwind'],
 		links: [
 			{ name: 'github', url: 'https://github.com/kromate/Codeden' },
-			{ name: 'live', url: 'https://codeden.netlify.app/' },
+			{ name: 'live', url: 'https://codeden.kromate.dev/' },
 		],
 		show: true,
 	},
@@ -188,7 +188,7 @@ export const projectsArr: Array<IProject> = [
 		tags: ['Nuxt', 'Tailwind', 'Firebase'],
 		links: [
 			{ name: 'github', url: 'https://github.com/kromate/Timeline-Creator' },
-			{ name: 'live', url: 'https://timelinx.netlify.app/' },
+			{ name: 'live', url: 'https://timeline.kromate.dev/' },
 		],
 		show: true,
 	},
@@ -198,7 +198,7 @@ export const projectsArr: Array<IProject> = [
 		tags: ['Google Maps', 'Firebase', 'Node.Js'],
 		links: [
 			{ name: 'github', url: 'https://github.com/kromate/Octobus' },
-			{ name: 'live', url: 'https://octobus.netlify.app/' },
+			{ name: 'live', url: 'https://octobus.kromate.dev/' },
 		],
 		show: true,
 	},
@@ -254,7 +254,7 @@ export const projectsArr: Array<IProject> = [
 		tags: ['Vue', 'Faceapi.js', 'Webcam.js'],
 		links: [
 			{ name: 'github', url: 'https://github.com/kromate/faceReg' },
-			{ name: 'live', url: 'https://fas.netlify.app/' },
+			{ name: 'live', url: 'https://fas.kromate.dev/' },
 		],
 		show: true,
 	},
