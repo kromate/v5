@@ -93,6 +93,20 @@ export const projectsArr: Array<IProject> = [
 		links: [{ name: 'live', url: 'https://app.maplerad.com/' }],
 		show: true,
 	},
+		{
+		name: 'Axia',
+		desc: 'An Edutech websites built for a client (Contracted)',
+		tags: ['Vue', 'Tailwind', 'Nuxt 3'],
+		links:[],
+		// links: [
+		// 	{
+		// 		name: 'github',
+		// 		url: 'https://github.com/kromate/vue3-vite-tailwind-dashboard',
+		// 	},
+		// 	{ name: 'live', url: 'https://vite-dashboard.netlify.app/' },
+		// ],
+		show: true,
+	},
 	{
 		name: 'Wirepay',
 		desc: 'The Landing page for wirepay which is a product of Maplerad',
