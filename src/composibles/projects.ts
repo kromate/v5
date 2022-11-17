@@ -45,7 +45,7 @@ export const projectsArr: Array<IProject> = [
 		desc: 'An opensource kanban board built with Nuxt 3 and Tailwind',
 		tags: ['Nuxt 3', 'Tailwindcss', 'vuedraggble'],
 		links: [
-			{ name: 'github', url: 'https://github.com/kromate/gamexit' },
+			{ name: 'github', url: 'https://github.com/kromate/kanban' },
 			{ name: 'live', url: 'https://kanban.kromate.dev/' },
 		],
 		show: true,
@@ -59,7 +59,7 @@ export const projectsArr: Array<IProject> = [
 				name: 'github',
 				url: 'https://github.com/kromate/vue3-vite-tailwind-dashboard',
 			},
-			{ name: 'live', url: 'https://vite-dashboard.netlify.app/' },
+			{ name: 'live', url: 'https://dashboard.kromate.dev/' },
 		],
 		show: true,
 	},
@@ -250,8 +250,7 @@ export const projectsArr: Array<IProject> = [
 		desc: 'I converted the intercom clone to a vue plugin that can be used in any project',
 		tags: ['Typescript', 'NPM Package'],
 		links: [
-			{ name: 'github', url: 'https://github.com/kromate/careButton' },
-			{ name: 'live', url: 'https://kromate.github.io/careButton/' },
+			{ name: 'github', url: 'https://github.com/kromate/intercom-clone-vue-plugin' },
 		],
 		show: true,
 	},
@@ -291,7 +290,7 @@ export const projectsArr: Array<IProject> = [
 		tags: ['Vue', 'Ionic', 'firebase'],
 		links: [
 			{ name: 'github', url: 'https://github.com/KROM-TECH/Studee' },
-			{ name: 'live', url: 'https://studee.kromtech.io/' },
+			// { name: 'live', url: 'https://studee.kromtech.io/' },
 		],
 		show: true,
 	},
@@ -301,7 +300,7 @@ export const projectsArr: Array<IProject> = [
 		tags: ['Vue', 'firebase', 'APIs'],
 		links: [
 			{ name: 'github', url: 'https://github.com/KROM-TECH/KAA_VUE' },
-			{ name: 'live', url: 'https://kaa.kromtech.io/' },
+			// { name: 'live', url: 'https://kaa.kromtech.io/' },
 		],
 		show: true,
 	},
