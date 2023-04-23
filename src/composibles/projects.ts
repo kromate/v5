@@ -97,14 +97,7 @@ export const projectsArr: Array<IProject> = [
 		name: 'Axia',
 		desc: 'An Edutech websites built for a client (Contracted)',
 		tags: ['Vue', 'Tailwind', 'Nuxt 3'],
-		links:[],
-		// links: [
-		// 	{
-		// 		name: 'github',
-		// 		url: 'https://github.com/kromate/vue3-vite-tailwind-dashboard',
-		// 	},
-		// 	{ name: 'live', url: 'https://vite-dashboard.netlify.app/' },
-		// ],
+		links: [{ name: 'live', url: 'https://www.axia.africa/' }],
 		show: true,
 	},
 	{
